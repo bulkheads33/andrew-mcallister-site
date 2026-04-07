@@ -2,7 +2,14 @@
 
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Download } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  Download,
+  Landmark,
+  Sparkles,
+  UserCircle2,
+} from "lucide-react";
 
 const compareRows = [
   { old: "Owns accounting and reporting", next: "Builds systems that improve revenue, margin, and decision quality" },
@@ -47,7 +54,7 @@ const caseStudies = [
     challenge:
       "A fragmented debt structure limited flexibility and made it harder to allocate capital toward the best long term uses of cash.",
     action:
-      "Engagement was led across banks, private credit providers, insurers, and advisors to move the business to a single interest only revolver that better matched the operating profile of the company.",
+      "Engagement was led across a syndicate of new banks to move the business to a single interest only revolver that better matched the operating profile of the company.",
     outcome:
       "More than $8M of annual cash flow was unlocked and the business gained flexibility to reinvest in assets, buy out leases, and purchase strategic land that strengthened long term stability.",
   },
@@ -65,42 +72,109 @@ const caseStudies = [
   },
 ];
 
-function pillStyle(active) {
+function badgeStyle(background, border, color) {
   return {
-    padding: "10px 16px",
-    borderRadius: "999px",
-    border: active ? "1px solid #67e8f9" : "1px solid rgba(255,255,255,0.2)",
-    background: active ? "rgba(6,182,212,0.16)" : "rgba(255,255,255,0.04)",
-    color: "#fff",
-    cursor: "pointer",
-    fontSize: "14px",
+    display: "inline-block",
+    padding: "8px 14px",
+    borderRadius: 999,
+    border,
+    background,
+    color,
+    fontSize: 14,
+    lineHeight: 1,
+    whiteSpace: "nowrap",
   };
 }
 
-function cardStyle(extra = {}) {
+function sectionCard(extra = {}) {
   return {
     background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "24px",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+    border: "1px solid rgba(255,255,255,0.10)",
+    borderRadius: 28,
+    boxShadow: "0 18px 50px rgba(0,0,0,0.22)",
     ...extra,
+  };
+}
+
+function buttonPrimaryStyle() {
+  return {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 10,
+    padding: "14px 22px",
+    borderRadius: 18,
+    background: "#ffffff",
+    color: "#0f172a",
+    fontWeight: 700,
+    textDecoration: "none",
+    border: "none",
+  };
+}
+
+function buttonSecondaryStyle() {
+  return {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 10,
+    padding: "14px 22px",
+    borderRadius: 18,
+    border: "1px solid rgba(255,255,255,0.18)",
+    color: "#ffffff",
+    textDecoration: "none",
+    background: "transparent",
+  };
+}
+
+function filterStyle(active) {
+  return {
+    borderRadius: 999,
+    border: active ? "1px solid rgba(103,232,249,0.7)" : "1px solid rgba(255,255,255,0.18)",
+    background: active ? "rgba(6,182,212,0.18)" : "rgba(255,255,255,0.05)",
+    color: "#fff",
+    padding: "10px 16px",
+    fontSize: 14,
+    cursor: "pointer",
+    boxShadow: active ? "0 12px 28px rgba(8,145,178,0.18)" : "none",
   };
 }
 
 function SectionIntro({ eyebrow, title, body }) {
   return (
-    <div style={{ maxWidth: 900 }}>
-      <div style={{ color: "#67e8f9", textTransform: "uppercase", letterSpacing: "0.2em", fontSize: 12, fontWeight: 700 }}>
+    <div style={{ maxWidth: 920 }}>
+      <div
+        style={{
+          color: "#67e8f9",
+          textTransform: "uppercase",
+          letterSpacing: "0.2em",
+          fontSize: 12,
+          fontWeight: 700,
+        }}
+      >
         {eyebrow}
       </div>
-      <h2 style={{ color: "#fff", fontSize: 40, marginTop: 12, marginBottom: 0, lineHeight: 1.1 }}>
+      <h2
+        style={{
+          color: "#fff",
+          fontSize: "clamp(32px, 4vw, 52px)",
+          lineHeight: 1.08,
+          marginTop: 14,
+          marginBottom: 0,
+        }}
+      >
         {title}
       </h2>
-      {body && (
-        <p style={{ color: "#cbd5e1", fontSize: 20, lineHeight: 1.7, marginTop: 20 }}>
+      {body ? (
+        <p
+          style={{
+            marginTop: 18,
+            color: "#cbd5e1",
+            fontSize: 20,
+            lineHeight: 1.7,
+          }}
+        >
           {body}
         </p>
-      )}
+      ) : null}
     </div>
   );
 }
@@ -109,7 +183,12 @@ function Case({ c }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div style={cardStyle()}>
+    <div
+      style={sectionCard({
+        overflow: "hidden",
+        background: "linear-gradient(145deg, rgba(15,23,42,0.95), rgba(15,23,42,0.78))",
+      })}
+    >
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -124,9 +203,9 @@ function Case({ c }) {
       >
         <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "flex-start" }}>
           <div>
-            <h3 style={{ color: "#fff", fontSize: 28, margin: 0, lineHeight: 1.2 }}>{c.title}</h3>
-            <p style={{ color: "#cbd5e1", marginTop: 16, lineHeight: 1.7 }}>{c.story}</p>
-            <p style={{ color: "#a5f3fc", fontWeight: 600, marginTop: 18, lineHeight: 1.7 }}>{c.outcome}</p>
+            <h3 style={{ fontSize: 30, lineHeight: 1.18, color: "#fff", margin: 0 }}>{c.title}</h3>
+            <p style={{ marginTop: 14, color: "#cbd5e1", lineHeight: 1.75 }}>{c.story}</p>
+            <p style={{ marginTop: 16, color: "#a5f3fc", fontWeight: 600, lineHeight: 1.75 }}>{c.outcome}</p>
           </div>
           <ChevronDown
             size={20}
@@ -134,15 +213,15 @@ function Case({ c }) {
               color: "#cbd5e1",
               transform: open ? "rotate(180deg)" : "rotate(0deg)",
               transition: "transform 0.2s ease",
+              marginTop: 6,
               flexShrink: 0,
-              marginTop: 4,
             }}
           />
         </div>
       </button>
 
       <AnimatePresence initial={false}>
-        {open && (
+        {open ? (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -152,29 +231,37 @@ function Case({ c }) {
           >
             <div
               style={{
-                padding: 24,
-                borderTop: "1px solid rgba(255,255,255,0.1)",
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr",
                 gap: 20,
+                padding: 24,
+                borderTop: "1px solid rgba(255,255,255,0.10)",
+                background: "rgba(0,0,0,0.10)",
               }}
             >
-              <div>
-                <div style={{ color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.16em", fontSize: 12, fontWeight: 700, marginBottom: 8 }}>
-                  Challenge
-                </div>
-                <p style={{ color: "#cbd5e1", lineHeight: 1.7, margin: 0 }}>{c.challenge}</p>
-              </div>
-              <div>
-                <div style={{ color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.16em", fontSize: 12, fontWeight: 700, marginBottom: 8 }}>
-                  Action
-                </div>
-                <p style={{ color: "#cbd5e1", lineHeight: 1.7, margin: 0 }}>{c.action}</p>
-              </div>
               <div
                 style={{
-                  gridColumn: "1 / -1",
-                  borderRadius: 18,
+                  display: "grid",
+                  gap: 20,
+                  gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                }}
+              >
+                <div>
+                  <div style={{ color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.16em", fontSize: 12, fontWeight: 700, marginBottom: 8 }}>
+                    Challenge
+                  </div>
+                  <p style={{ color: "#cbd5e1", lineHeight: 1.7, margin: 0 }}>{c.challenge}</p>
+                </div>
+                <div>
+                  <div style={{ color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.16em", fontSize: 12, fontWeight: 700, marginBottom: 8 }}>
+                    Action
+                  </div>
+                  <p style={{ color: "#cbd5e1", lineHeight: 1.7, margin: 0 }}>{c.action}</p>
+                </div>
+              </div>
+
+              <div
+                style={{
+                  borderRadius: 20,
                   border: "1px solid rgba(103,232,249,0.15)",
                   background: "rgba(34,211,238,0.06)",
                   padding: 20,
@@ -187,15 +274,15 @@ function Case({ c }) {
               </div>
             </div>
           </motion.div>
-        )}
+        ) : null}
       </AnimatePresence>
     </div>
   );
 }
 
-export default function Site() {
-  const [filter, setFilter] = useState("All");
+export default function Page() {
   const [imageError, setImageError] = useState(false);
+  const [filter, setFilter] = useState("All");
 
   const filtered = useMemo(() => {
     if (filter === "All") return caseStudies;
@@ -206,43 +293,69 @@ export default function Site() {
     <div
       style={{
         minHeight: "100vh",
+        color: "#fff",
         background:
           "radial-gradient(circle at top left, rgba(34,211,238,0.16), transparent 22%), radial-gradient(circle at 80% 10%, rgba(168,85,247,0.16), transparent 20%), radial-gradient(circle at 50% 60%, rgba(59,130,246,0.10), transparent 28%), linear-gradient(to bottom, #020617, #020617)",
-        color: "#fff",
       }}
     >
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "64px 24px 96px" }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 80px" }}>
+        <section style={{ marginBottom: 24 }}>
+          <div
+            style={{
+              color: "#67e8f9",
+              fontSize: "clamp(18px, 2vw, 24px)",
+              letterSpacing: "0.28em",
+              fontWeight: 700,
+            }}
+          >
+            ANDREW P. McALLISTER, MBA
+          </div>
+          <div style={{ color: "#94a3b8", fontSize: 14, marginTop: 6 }}>
+            CFO • CIO • Systems Architect
+          </div>
+        </section>
+
         <section
           style={{
             display: "grid",
-            gridTemplateColumns: "1.1fr 0.9fr",
             gap: 48,
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             alignItems: "start",
           }}
         >
           <div>
-            <div
-              style={{
-                display: "inline-block",
-                padding: "8px 14px",
-                borderRadius: 999,
-                border: "1px solid rgba(103,232,249,0.2)",
-                background: "rgba(34,211,238,0.1)",
-                color: "#a5f3fc",
-                fontSize: 14,
-                marginBottom: 20,
-              }}
-            >
+            <div style={badgeStyle("rgba(34,211,238,0.10)", "1px solid rgba(103,232,249,0.20)", "#a5f3fc")}>
               Hybrid view for PE sponsors, CEOs, and operating teams
             </div>
 
-            <h1 style={{ fontSize: 64, lineHeight: 1.05, margin: 0, maxWidth: 900 }}>
+            <h1
+              style={{
+                marginTop: 18,
+                marginBottom: 0,
+                maxWidth: 900,
+                fontSize: "clamp(48px, 7vw, 86px)",
+                lineHeight: 1.02,
+                letterSpacing: "-0.03em",
+              }}
+            >
               Finance should shape how a business performs, not just report on it.
             </h1>
 
-            <p style={{ color: "#cbd5e1", fontSize: 22, lineHeight: 1.7, marginTop: 24, maxWidth: 900 }}>
+            <p
+              style={{
+                marginTop: 24,
+                maxWidth: 900,
+                color: "#cbd5e1",
+                fontSize: "clamp(18px, 2vw, 24px)",
+                lineHeight: 1.72,
+              }}
+            >
               The strongest finance leaders do more than oversee reporting. They help teams see the business clearly, align around the right plan, and build systems that improve revenue, margin, cash flow, and long term value. The work is done alongside teams so the system is understood, trusted, and used to drive better decisions every day.
             </p>
+
+            <div style={{ marginTop: 22, color: "#67e8f9", fontWeight: 700, fontSize: 20 }}>
+              ~10% EBITDA improvement driven by pricing redesign, billing automation, and faster cash collection
+            </div>
 
             <div
               style={{
@@ -253,77 +366,55 @@ export default function Site() {
                 padding: 24,
               }}
             >
-              <p style={{ color: "#f8fafc", fontSize: 22, lineHeight: 1.7, margin: 0 }}>
-                Sustainable EBITDA growth comes from alignment, with systems, teams, and decisions reinforcing each other over time.
-              </p>
+              <div style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                <Sparkles size={20} style={{ color: "#67e8f9", marginTop: 4, flexShrink: 0 }} />
+                <p style={{ color: "#f8fafc", fontSize: 22, lineHeight: 1.7, margin: 0 }}>
+                  Sustainable EBITDA growth comes from alignment, with systems, teams, and decisions reinforcing each other over time.
+                </p>
+              </div>
             </div>
 
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 28 }}>
-              <a
-                href="/Andrew_McAllister_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "14px 22px",
-                  borderRadius: 18,
-                  background: "#ffffff",
-                  color: "#0f172a",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                }}
-              >
+              <a href="/Andrew_McAllister_Resume.pdf" target="_blank" rel="noreferrer" style={buttonPrimaryStyle()}>
                 Resume <Download size={16} />
               </a>
-
-              <a
-                href="#cases"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "14px 22px",
-                  borderRadius: 18,
-                  border: "1px solid rgba(255,255,255,0.2)",
-                  color: "#fff",
-                  textDecoration: "none",
-                  background: "transparent",
-                }}
-              >
-                Explore case studies
+              <a href="#cases" style={buttonSecondaryStyle()}>
+                Explore case studies <ArrowRight size={16} />
               </a>
             </div>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            <div style={cardStyle({ overflow: "hidden", padding: 0 })}>
+            <div style={sectionCard({ overflow: "hidden", padding: 0 })}>
               {!imageError ? (
                 <img
                   src="/headshot.png"
-                  alt="Andrew McAllister"
+                  alt="ANDREW P. McALLISTER"
                   onError={() => setImageError(true)}
-                  style={{ width: "100%", aspectRatio: "4 / 5", objectFit: "cover", display: "block" }}
+                  style={{ width: "100%", aspectRatio: "4 / 5", display: "block", objectFit: "cover" }}
                 />
               ) : (
                 <div
                   style={{
-                    width: "100%",
                     aspectRatio: "4 / 5",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     color: "#64748b",
-                    fontSize: 18,
                   }}
                 >
-                  Photo not found
+                  <UserCircle2 size={220} />
                 </div>
               )}
             </div>
 
-            <div style={cardStyle({ padding: 24, background: "rgba(16,185,129,0.08)", border: "1px solid rgba(52,211,153,0.2)" })}>
+            <div
+              style={sectionCard({
+                padding: 24,
+                background: "rgba(16,185,129,0.08)",
+                border: "1px solid rgba(52,211,153,0.20)",
+              })}
+            >
               <div style={{ color: "#86efac", textTransform: "uppercase", letterSpacing: "0.18em", fontSize: 12, fontWeight: 700 }}>
                 Transaction and capital experience
               </div>
@@ -331,14 +422,7 @@ export default function Site() {
                 {["M&A", "Refinancing", "Capital Structuring", "Hedging", "Underwriting"].map((item) => (
                   <span
                     key={item}
-                    style={{
-                      padding: "8px 12px",
-                      borderRadius: 999,
-                      border: "1px solid rgba(134,239,172,0.15)",
-                      background: "rgba(16,185,129,0.12)",
-                      color: "#dcfce7",
-                      fontSize: 14,
-                    }}
+                    style={badgeStyle("rgba(16,185,129,0.12)", "1px solid rgba(134,239,172,0.15)", "#dcfce7")}
                   >
                     {item}
                   </span>
@@ -348,15 +432,42 @@ export default function Site() {
           </div>
         </section>
 
-        <section style={{ marginTop: 64 }}>
+        <section style={{ marginTop: 28 }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 16,
+              color: "#94a3b8",
+              opacity: 0.85,
+              fontSize: 14,
+            }}
+          >
+            <span>Rose Cay Capital / Rose Cay Maritime</span>
+            <span>•</span>
+            <span>McAllister Towing / Bridgeport & Port Jeff Ferry</span>
+            <span>•</span>
+            <span>Merrill Lynch</span>
+            <span>•</span>
+            <span>Prudential Securities</span>
+          </div>
+        </section>
+
+        <section style={{ marginTop: 56 }}>
           <SectionIntro
             eyebrow="Old and new"
             title="The role is changing, even when job descriptions do not say so clearly."
             body="The old CFO model centers on control, reporting, and process stewardship. The newer model still needs those disciplines, but uses them as a base for stronger pricing, better capital decisions, and more durable value creation."
           />
 
-          <div style={{ ...cardStyle({ marginTop: 28, overflow: "hidden" }) }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", background: "linear-gradient(to right, #0f172a, #1e293b)" }}>
+          <div style={{ ...sectionCard({ marginTop: 28, overflow: "hidden" }) }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                background: "linear-gradient(to right, #0f172a, #1e293b)",
+              }}
+            >
               <div style={{ padding: 20, color: "#cbd5e1", textTransform: "uppercase", letterSpacing: "0.16em", fontSize: 12, fontWeight: 700 }}>
                 Old CFO
               </div>
@@ -364,10 +475,18 @@ export default function Site() {
                 New CFO
               </div>
             </div>
+
             {compareRows.map((r) => (
-              <div key={r.old} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+              <div
+                key={r.old}
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                  borderTop: "1px solid rgba(255,255,255,0.10)",
+                }}
+              >
                 <div style={{ padding: 20, color: "#94a3b8" }}>{r.old}</div>
-                <div style={{ padding: 20, color: "#fff", borderLeft: "1px solid rgba(255,255,255,0.1)" }}>{r.next}</div>
+                <div style={{ padding: 20, color: "#fff", borderLeft: "1px solid rgba(255,255,255,0.10)" }}>{r.next}</div>
               </div>
             ))}
           </div>
@@ -380,16 +499,39 @@ export default function Site() {
             body="Solving difficult problems, whether financial, operational, or strategic, rarely comes from staying inside one lane. The work often requires a mix of structure, creativity, and real time collaboration with teams close to the problem."
           />
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20, marginTop: 28 }}>
+          <div
+            style={{
+              display: "grid",
+              gap: 24,
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              marginTop: 28,
+            }}
+          >
             {[
-              ["Automate the repeatable", "Routine workflow should not consume executive energy when it can be systemized and monitored.", "rgba(34,211,238,0.10)"],
-              ["Capture meaningful data", "The value is not cleaner reports alone. The value is knowing what the business is truly doing in real time.", "rgba(168,85,247,0.10)"],
-              ["Translate insight into margin", "Better visibility should lead to smarter pricing, sharper cost discipline, and improved cash generation.", "rgba(16,185,129,0.10)"],
-              ["Help teams move together", "Sustainable gains usually happen when the organization understands the plan and believes in how to execute it.", "rgba(245,158,11,0.10)"],
-            ].map(([title, text, bg]) => (
-              <div key={title} style={cardStyle({ padding: 24, background: bg })}>
-                <h3 style={{ margin: 0, color: "#fff", fontSize: 24 }}>{title}</h3>
-                <p style={{ marginTop: 14, color: "#e2e8f0", lineHeight: 1.7 }}>{text}</p>
+              {
+                title: "Automate the repeatable",
+                text: "Routine workflow should not consume executive energy when it can be systemized and monitored.",
+                background: "linear-gradient(145deg, rgba(34,211,238,0.14), rgba(59,130,246,0.10))",
+              },
+              {
+                title: "Capture meaningful data",
+                text: "The value is not cleaner reports alone. The value is knowing what the business is truly doing in real time.",
+                background: "linear-gradient(145deg, rgba(168,85,247,0.14), rgba(217,70,239,0.10))",
+              },
+              {
+                title: "Translate insight into margin",
+                text: "Better visibility should lead to smarter pricing, sharper cost discipline, and improved cash generation.",
+                background: "linear-gradient(145deg, rgba(16,185,129,0.14), rgba(20,184,166,0.10))",
+              },
+              {
+                title: "Help teams move together",
+                text: "Sustainable gains usually happen when the organization understands the plan and believes in how to execute it.",
+                background: "linear-gradient(145deg, rgba(245,158,11,0.14), rgba(249,115,22,0.10))",
+              },
+            ].map((item) => (
+              <div key={item.title} style={sectionCard({ padding: 24, background: item.background })}>
+                <h3 style={{ margin: 0, color: "#fff", fontSize: 24, lineHeight: 1.2 }}>{item.title}</h3>
+                <p style={{ marginTop: 14, color: "#e2e8f0", lineHeight: 1.7 }}>{item.text}</p>
               </div>
             ))}
           </div>
@@ -404,28 +546,54 @@ export default function Site() {
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 28 }}>
             {filters.map((f) => (
-              <button key={f} onClick={() => setFilter(f)} style={pillStyle(filter === f)}>
+              <button key={f} onClick={() => setFilter(f)} style={filterStyle(filter === f)}>
                 {f}
               </button>
             ))}
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 28 }}>
+          <div
+            style={{
+              display: "grid",
+              gap: 24,
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              marginTop: 28,
+            }}
+          >
             {filtered.map((c) => (
               <Case key={c.id} c={c} />
             ))}
           </div>
         </section>
 
-        <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 64 }}>
-          <div style={cardStyle({ padding: 24, background: "rgba(34,211,238,0.08)", border: "1px solid rgba(34,211,238,0.2)" })}>
+        <section
+          style={{
+            display: "grid",
+            gap: 24,
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+            marginTop: 64,
+          }}
+        >
+          <div
+            style={sectionCard({
+              padding: 24,
+              background: "rgba(34,211,238,0.08)",
+              border: "1px solid rgba(34,211,238,0.20)",
+            })}
+          >
             <h3 style={{ margin: 0, color: "#fff", fontSize: 30 }}>Right fit</h3>
             <p style={{ marginTop: 14, color: "#e2e8f0", lineHeight: 1.7 }}>
               This profile fits best when a company wants to align teams, build a clear plan, and improve EBITDA through better systems, better pricing, and better capital decisions.
             </p>
           </div>
 
-          <div style={cardStyle({ padding: 24, background: "rgba(168,85,247,0.08)", border: "1px solid rgba(168,85,247,0.2)" })}>
+          <div
+            style={sectionCard({
+              padding: 24,
+              background: "rgba(168,85,247,0.08)",
+              border: "1px solid rgba(168,85,247,0.20)",
+            })}
+          >
             <h3 style={{ margin: 0, color: "#fff", fontSize: 30 }}>Not the best fit</h3>
             <p style={{ marginTop: 14, color: "#e2e8f0", lineHeight: 1.7 }}>
               This is likely not the right fit if the need is limited to supervising accounting, preserving the status quo, or pursuing short term gains without building stronger operating foundations.
@@ -434,13 +602,24 @@ export default function Site() {
         </section>
 
         <section style={{ marginTop: 64 }}>
-          <div style={cardStyle({ padding: 32, background: "linear-gradient(to right, #0f172a, #1e293b)" })}>
-            <div style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 32 }}>
+          <div
+            style={sectionCard({
+              padding: 32,
+              background: "linear-gradient(to right, #0f172a, #1e293b)",
+            })}
+          >
+            <div
+              style={{
+                display: "grid",
+                gap: 32,
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              }}
+            >
               <div>
                 <div style={{ color: "#67e8f9", textTransform: "uppercase", letterSpacing: "0.18em", fontSize: 12, fontWeight: 700 }}>
                   Contact
                 </div>
-                <h2 style={{ color: "#fff", fontSize: 40, marginTop: 12, marginBottom: 0, lineHeight: 1.1 }}>
+                <h2 style={{ color: "#fff", fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.08, marginTop: 14, marginBottom: 0 }}>
                   If the goal is to bring people along and build something durable, it is worth having a conversation.
                 </h2>
                 <p style={{ color: "#cbd5e1", fontSize: 20, lineHeight: 1.7, marginTop: 18 }}>
@@ -455,7 +634,7 @@ export default function Site() {
                     display: "block",
                     padding: 18,
                     borderRadius: 18,
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.10)",
                     background: "rgba(255,255,255,0.05)",
                     color: "#fff",
                     textDecoration: "none",
@@ -472,7 +651,7 @@ export default function Site() {
                     display: "block",
                     padding: 18,
                     borderRadius: 18,
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.10)",
                     background: "rgba(255,255,255,0.05)",
                     color: "#fff",
                     textDecoration: "none",
@@ -483,13 +662,17 @@ export default function Site() {
 
                 <div
                   style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
                     padding: 18,
                     borderRadius: 18,
-                    border: "1px solid rgba(255,255,255,0.1)",
+                    border: "1px solid rgba(255,255,255,0.10)",
                     background: "rgba(255,255,255,0.05)",
                     color: "#e2e8f0",
                   }}
                 >
+                  <Landmark size={18} style={{ color: "#67e8f9" }} />
                   Brooklyn, New York
                 </div>
               </div>
