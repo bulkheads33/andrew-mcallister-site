@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Andrew P. McAllister — CFO · CIO · Operating Executive</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" data-presets="env,react">
+// Content data for Andrew P. McAllister site
+const SITE_DATA = {
+  name: "Andrew P. McAllister",
+  credential: "MBA",
+  titles: ["CFO", "CIO", "Operating Executive"],
+  tagline: "CFO, technology executive, and investment professional building value at the intersection of operations and institutional capital.",
+
+  positioning:
+    "I roll up my sleeves to learn where and how the data is generated — not just digging deep into numbers, but being onsite where they originate. Learning from the people at the point of origin is what builds team trust, buy-in, and a common set of goals.",
+
+  seeking:
+    "Open to CEO, CFO, or President mandates at PE-sponsored portfolio companies where equity alignment and operational value creation are central to the thesis.",
+
+  stats: [
+    { value: "$420M", label: "Assets built", sub: "Rose Cay Maritime, from bankruptcy " },
+    { value: "$60M+", label: "Year-1 revenue", sub: "founding CFO, scaled 0→120 FTE" },
+    { value: "$8M+", label: "Annual cash unlocked", sub: "debt restructuring, 15 locations" },
+    { value: "30 yrs", label: "Finance · Ops · Tech", sub: "startup to Fortune 500" },
+  ],
+
+  valueCreation: [
+    {
+      title: "KPI & Pricing Optimization",
+      body: "Analyzed and rebuilt pricing tariffs across 13 locations; compressed billing cycle from one week to one day, 8→2 FTE. Reviewed and implemented new RO/PAX pricing with peak and tiered pricing — first on, first off.",
+    },
+    {
+      title: "Capital Restructuring",
+      body: "Consolidated multiple vessel term loans into a single fleet-based interest-only revolver — unlocked $8M+ in annual cash flow. Initiated interest rate and fuel hedging programs.",
+    },
+    {
+      title: "Digital Transformation",
+      body: "150-year-old enterprise brought to full-stack IT, PCI compliance, enterprise reporting across 15 U.S. locations, and ERP implementation.",
+    },
+    {
+      title: "Startup Scale-Up",
+      body: "Founding CFO of Rose Cay Maritime: zero to $420M assets, 120+ employees, $60M Year-1 revenue. Fully online platform with no paper workflow or processes from Day 1.",
+    },
+    {
+      title: "ERP & Financial Controls",
+      body: "Led G/L migration from QuickBooks to Oracle NetSuite; institutional-grade controls, covenant tracking, 13-week cash forecasting, and institutional owner/board reporting.",
+    },
+    {
+      title: "Buy-Side Underwriting",
+      body: "Origination, diligence, and IC materials for Rose Cay Capital across maritime, aviation, and infrastructure real-asset strategies.",
+    },
+  ],
+
+  skills: [
+    "KPI Development & BI Dashboards",
+    "Change Management",
+    "Hands-on / Onsite Operational Optimization",
+    "Budget / Target-Driven Management",
+    "Digital Transformation & IT Architecture",
+    "Financial Strategy & FP&A",
+    "Capital Structure & Debt Restructuring",
+    "ERP Implementation (Oracle NetSuite)",
+    "Origination, Diligence & Underwriting",
+    "PE Portfolio Operations & IC Support",
+    "M&A / Deal Execution & Integration",
+    "Cash Flow Forecasting & Covenant Mgmt",
+    "B2B & B2C Revenue Optimization",
+    "Treasury, Hedging & Risk",
+    "Asset-Intensive Industries",
+  ],
+
+  timeline: [
+    {
+      period: "2022 — Present",
+      role: "Maritime Executive · Founding CFO",
+      org: "Rose Cay Capital / Rose Cay Maritime — New York, NY",
+      note: "Real-asset special situations platform (maritime, aviation, infrastructure). Built Rose Cay Maritime from zero to $420M assets; now drives origination, diligence, and underwriting at Rose Cay Capital. Highest-regulated maritime sector with top-tier oil customers such as ExxonMobil.",
+    },
+    {
+      period: "2006 — 2022",
+      role: "Chief Information Officer / VP Finance",
+      org: "McAllister Towing and Transportation — New York, NY",
+      note: "16-year digital and financial transformation of a 150-year-old enterprise. 750+ employees, $300M assets, 15 U.S. port locations. Clients: Maersk, BP, ONE Shipping.",
+    },
+    {
+      period: "1995 — 2006",
+      role: "First VP · Project Manager · Vice President",
+      org: "Prudential Securities · Morgan Stanley · Merrill Lynch",
+      note: "10+ years in bulge-bracket operations leadership, technology transformation, and risk management. Built Prudential's first Broker Dealer website; distributed a $50M NASD regulatory penalty to 70,000+ clients at Morgan Stanley.",
+    },
+    {
+      period: "Education",
+      role: "MBA, NYU Stern · BA History, Connecticut College",
+      org: "",
+      note: "Executive MBA sponsored by Prudential Securities — sole firm-sponsored candidate that year. While at Connecticut College: Varsity Soccer, Club Baseball and Golf; attended the London School of Economics (Hansard Scholar) and the Washington Semester Program in Global Economics and Business at American University, Washington DC.",
+    },
+  ],
+
+  deals: [
+    {
+      tag: "Platform Build",
+      title: "Rose Cay Maritime — $420M Jones Act platform",
+      metric: "Zero → $60M+ revenue Year 1 · 120+ FTE",
+      note: "Founding CFO. Built entire financial and operational infrastructure; acquired and rehabilitated distressed vessels offering over 750,000 bbls of capacity, approved and certified by USCG and ABS; onboarded Fortune 100 energy customers across the U.S. supply chain.",
+    },
+    {
+      tag: "Capital Restructuring",
+      title: "Fleet-based revolver consolidation",
+      metric: "$8M+ in annual incremental cash flow",
+      note: "Collapsed multiple vessel term loans into a single interest-only revolving credit facility at McAllister Towing — retained strategic flexibility while materially improving operating cash. Introduced both interest rate and fuel hedging programs to sharpen budgeting and cash-flow management.",
+    },
+    {
+      tag: "Digital Transformation",
+      title: "ERP + AR/AP + Billing modernization",
+      metric: "Billing cycle: 1 week → 1 day · 8 → 2 FTE",
+      note: "Full online migration of 2,400+ invoices/month; enabled KPI-driven pricing tariff optimization across 13 locations.",
+    },
+    {
+      tag: "Greenfield ERP",
+      title: "QuickBooks → Oracle NetSuite",
+      metric: "Institutional-grade controls, 13-week cash forecast",
+      note: "Led G/L migration from Day 1 of Rose Cay Maritime — covenant tracking, close discipline, and sponsor-ready reporting stood up from inception. Completed the same migration from Dynamics to MS Dynamics at McAllister.",
+    },
+    {
+      tag: "M&A Advisory",
+      title: "$100M+ in vessel transactions",
+      metric: "New builds · acquisitions · disposals",
+      note: "Financial modeling and operational diligence supporting ownership decisions at McAllister Towing across a 16-year span.",
+    },
+    {
+      tag: "B2C Launch",
+      title: "PAXRO ferry ticketing + loyalty",
+      metric: "450,000+ cars/yr · +8% profitability at launch",
+      note: "Architected and launched online ticketing and 'Barnum Bucks' loyalty system — unlocked new ticket classes and cash flow immediately from go-live. Instituted PCI compliance standards company-wide.",
+    },
+  ],
+
+  aiTech: [
+    {
+      title: "AI Fluency — Anthropic certified",
+      body: "AI Fluency Framework & Foundations, Agent Skills, Claude 101, Claude Cowork — completed March 2026.",
+    },
+    {
+      title: "Systems architected & run",
+      body: "Oracle NetSuite · HELM Operations · bill.com · Ramp · BI dashboards · Gateway Ticketing · PCI + ISO 9001 compliance stood up firm-wide.",
+    },
+    {
+      title: "Operator's instinct for data",
+      body: "First Broker Dealer website at Prudential; 16-year digital transformation at McAllister; full digital stack at Rose Cay from Day 1.",
+    },
+  ],
+
+  contact: {
+    linkedin: "https://www.linkedin.com/in/andrewpmcallister",
+    email: "APMcA@outlook.com",
+    phone: "347.452.9133",
+    location: "Brooklyn, NY (open to relocate)",
+    note: "Open to conversations with sponsors, boards, and recruiters on CEO, CFO, and President mandates at PE-sponsored portfolio companies.",
+  },
+};
+
+window.SITE_DATA = SITE_DATA;
+
+// Small reusable bits
+const { useState, useEffect, useRef } = React;
+
+function Eyebrow({ children, className = "" }) {
+  return (
+    <div className={`eyebrow ${className}`}>
+      <span className="eyebrow-dot" />
+      {children}
+    </div>
+  );
+}
+
+function SectionHeader({ number, kicker, title, lead }) {
+  return (
+    <div className="section-head">
+      <div className="section-head-meta">
+        <span className="section-number">{number}</span>
+        <span className="section-kicker">{kicker}</span>
+      </div>
+      <h2 className="section-title">{title}</h2>
+      {lead && <p className="section-lead">{lead}</p>}
+    </div>
+  );
+}
+
+function Pill({ children }) {
+  return <span className="pill">{children}</span>;
+}
+
+function Stat({ value, label, sub }) {
+  return (
+    <div className="stat">
+      <div className="stat-value">{value}</div>
+      <div className="stat-label">{label}</div>
+      {sub && <div className="stat-sub">{sub}</div>}
+    </div>
+  );
+}
+
+function Rule() {
+  return <div className="rule" />;
+}
+
+Object.assign(window, { Eyebrow, SectionHeader, Pill, Stat, Rule });
+
+// Three hero variants
+const D = () => window.SITE_DATA;
+
+function HeroEditorial() {
+  const d = D();
+  return (
+    <section className="hero hero-editorial">
+      <div className="hero-grid">
+        <div className="hero-copy">
+          <Eyebrow>Andrew P. McAllister, {d.credential}</Eyebrow>
+          <h1 className="hero-name">
+            <span className="hero-name-line">Andrew P.</span>
+            <span className="hero-name-line hero-name-italic">McAllister</span>
+          </h1>
+          <div className="hero-titles">
+            {d.titles.map((t, i) => (
+              <React.Fragment key={t}>
+                <span>{t}</span>
+                {i < d.titles.length - 1 && <span className="hero-titles-sep">·</span>}
+              </React.Fragment>
+            ))}
+          </div>
+          <p className="hero-tagline">{d.tagline}</p>
+          <div className="hero-ctas">
+            <a className="btn btn-primary" href="#contact">Start a conversation</a>
+            <a className="btn btn-ghost" href={d.contact.linkedin} target="_blank" rel="noreferrer">LinkedIn →</a>
+          </div>
+        </div>
+        <div className="hero-portrait-wrap">
+          <div className="hero-portrait-frame">
+            <img src="assets/headshot.png" alt="Andrew P. McAllister" className="hero-portrait" />
+          </div>
+          <div className="hero-portrait-caption">
+            <span>New York · Open to relocation</span>
+          </div>
+        </div>
+      </div>
+      <div className="hero-stats">
+        {d.stats.map((s) => (
+          <Stat key={s.label} {...s} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function HeroStatsFirst() {
+  const d = D();
+  return (
+    <section className="hero hero-statsfirst">
+      <div className="hero-sf-top">
+        <Eyebrow>Andrew P. McAllister, {d.credential}</Eyebrow>
+        <div className="hero-sf-titles">
+          {d.titles.join(" · ")} · Operating Executive
+        </div>
+      </div>
+      <div className="hero-sf-kpis">
+        {d.stats.map((s, i) => (
+          <div key={s.label} className="hero-sf-kpi">
+            <div className="hero-sf-kpi-num">{s.value}</div>
+            <div className="hero-sf-kpi-label">{s.label}</div>
+            <div className="hero-sf-kpi-sub">{s.sub}</div>
+          </div>
+        ))}
+      </div>
+      <div className="hero-sf-split">
+        <div className="hero-sf-split-copy">
+          <h1 className="hero-sf-name">
+            Andrew P. <em>McAllister</em>
+          </h1>
+          <p className="hero-sf-tagline">{d.tagline}</p>
+          <div className="hero-ctas">
+            <a className="btn btn-primary" href="#contact">Start a conversation</a>
+            <a className="btn btn-ghost" href={d.contact.linkedin} target="_blank" rel="noreferrer">LinkedIn →</a>
+          </div>
+        </div>
+        <div className="hero-sf-split-portrait">
+          <img src="assets/headshot.png" alt="Andrew P. McAllister" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HeroStatement() {
+  const d = D();
+  return (
+    <section className="hero hero-statement">
+      <div className="hero-st-meta">
+        <Eyebrow>Andrew P. McAllister, {d.credential}</Eyebrow>
+        <div className="hero-st-titles">{d.titles.join(" · ")}</div>
+      </div>
+      <div className="hero-st-body">
+        <blockquote className="hero-st-quote">
+          <span className="hero-st-mark">“</span>
+          I roll up my sleeves to learn <em>where</em> and <em>how</em> the data is generated — not just digging deep into numbers, but being onsite where they originate.
+        </blockquote>
+        <div className="hero-st-attrib">
+          <img src="assets/headshot.png" alt="Andrew P. McAllister" className="hero-st-portrait" />
+          <div>
+            <div className="hero-st-name">Andrew P. McAllister</div>
+            <div className="hero-st-role">CFO · CIO · Operating Executive</div>
+          </div>
+        </div>
+      </div>
+      <div className="hero-st-footer">
+        <div className="hero-st-footer-stats">
+          {d.stats.slice(0, 3).map((s) => (
+            <div key={s.label} className="hero-st-stat">
+              <span className="hero-st-stat-v">{s.value}</span>
+              <span className="hero-st-stat-l">{s.label}</span>
+            </div>
+          ))}
+        </div>
+        <div className="hero-ctas">
+          <a className="btn btn-primary" href="#contact">Start a conversation</a>
+          <a className="btn btn-ghost" href={d.contact.linkedin} target="_blank" rel="noreferrer">LinkedIn →</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { HeroEditorial, HeroStatsFirst, HeroStatement });
+
+// Body sections
+const DATA = () => window.SITE_DATA;
+
+function ValueCreation() {
+  const d = DATA();
+  return (
+    <section id="value" className="sec sec-value">
+      <SectionHeader number="01" kicker="Value Creation" title="How I move the needle." lead="Six levers I come back to — from week-one cadence through target goals or exit." />
+      <div className="vc-grid">
+        {d.valueCreation.map((v, i) => (
+          <article key={v.title} className="vc-card">
+            <div className="vc-num">{String(i + 1).padStart(2, "0")}</div>
+            <h3 className="vc-title">{v.title}</h3>
+            <p className="vc-body">{v.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Skills() {
+  const d = DATA();
+  return (
+    <section id="skills" className="sec sec-skills">
+      <SectionHeader number="02" kicker="Capabilities" title="Where I operate." lead="A working vocabulary built over 25+ years across operating, advisory, and sponsor roles." />
+      <div className="skills-list">
+        {d.skills.map((s) => <Pill key={s}>{s}</Pill>)}
+      </div>
+    </section>
+  );
+}
+
+function Career() {
+  const d = DATA();
+  return (
+    <section id="career" className="sec sec-career">
+      <SectionHeader number="03" kicker="Career" title="The arc." />
+      <ol className="timeline">
+        {d.timeline.map((t, i) => (
+          <li key={i} className="timeline-row">
+            <div className="timeline-period">{t.period}</div>
+            <div className="timeline-body">
+              <div className="timeline-role">{t.role}</div>
+              {t.org && <div className="timeline-org">{t.org}</div>}
+              <div className="timeline-note">{t.note}</div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+function Deals() {
+  const d = DATA();
+  return (
+    <section id="deals" className="sec sec-deals">
+      <SectionHeader number="04" kicker="Case Studies" title="Representative work." lead="Sanitized for confidentiality — specifics available on request." />
+      <div className="deals-grid">
+        {d.deals.map((x, i) => (
+          <article key={i} className="deal-card">
+            <div className="deal-tag">{x.tag}</div>
+            <h3 className="deal-title">{x.title}</h3>
+            <div className="deal-metric">{x.metric}</div>
+            <p className="deal-note">{x.note}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function AITech() {
+  const d = DATA();
+  return (
+    <section id="aitech" className="sec sec-aitech">
+      <SectionHeader number="05" kicker="AI & Tech" title="A modern operator's stack." lead="Technology is a force multiplier for operators who still know where the data comes from." />
+      <div className="ai-grid">
+        {d.aiTech.map((x) => (
+          <div key={x.title} className="ai-card">
+            <h3 className="ai-title">{x.title}</h3>
+            <p className="ai-body">{x.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function About() {
+  const d = DATA();
+  return (
+    <section id="about" className="sec sec-about">
+      <SectionHeader number="06" kicker="About" title="Operating philosophy." />
+      <div className="about-grid">
+        <div className="about-body">
+          <p className="about-lead">{d.positioning}</p>
+          <p className="about-seek">{d.seeking}</p>
+        </div>
+        <aside className="about-facts">
+          <div className="about-fact">
+            <div className="about-fact-l">Role</div>
+            <div className="about-fact-v">CFO · CIO · President · CEO</div>
+          </div>
+          <div className="about-fact">
+            <div className="about-fact-l">Stage</div>
+            <div className="about-fact-v">Sponsor-backed platforms</div>
+          </div>
+          <div className="about-fact">
+            <div className="about-fact-l">Industries</div>
+            <div className="about-fact-v">Asset-intensive operating businesses</div>
+          </div>
+          <div className="about-fact">
+            <div className="about-fact-l">Education</div>
+            <div className="about-fact-v">MBA — Finance & Operations</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
+function Contact() {
+  const d = DATA();
+  return (
+    <section id="contact" className="sec sec-contact">
+      <div className="contact-wrap">
+        <div className="contact-kicker">Let's talk.</div>
+        <h2 className="contact-title">
+          Open to CEO, CFO, and President mandates in sponsor-backed platforms.
+        </h2>
+        <p className="contact-note">{d.contact.note}</p>
+        <div className="contact-ctas">
+          <a className="btn btn-primary btn-lg" href={d.contact.linkedin} target="_blank" rel="noreferrer">
+            Connect on LinkedIn →
+          </a>
+          <a className="btn btn-ghost btn-lg" href={`mailto:${d.contact.email}`}>
+            {d.contact.email}
+          </a>
+        </div>
+        <div className="contact-details">
+          <div className="contact-detail">
+            <div className="contact-detail-l">Phone</div>
+            <div className="contact-detail-v">{d.contact.phone}</div>
+          </div>
+          <div className="contact-detail">
+            <div className="contact-detail-l">Location</div>
+            <div className="contact-detail-v">{d.contact.location}</div>
+          </div>
+          <div className="contact-detail">
+            <div className="contact-detail-l">LinkedIn</div>
+            <div className="contact-detail-v">in/andrewpmcallister</div>
+          </div>
+        </div>
+        <div className="contact-foot">
+          © {new Date().getFullYear()} Andrew P. McAllister · MBA, NYU Stern
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Nav({ sections }) {
+  const items = [
+    { id: "value", label: "Value Creation", flag: "value" },
+    { id: "skills", label: "Skills", flag: "skills" },
+    { id: "career", label: "Career", flag: "career" },
+    { id: "deals", label: "Case Studies", flag: "deals" },
+    { id: "aitech", label: "AI & Tech", flag: "aitech" },
+    { id: "about", label: "About", flag: "about" },
+    { id: "contact", label: "Contact", flag: "contact" },
+  ];
+  return (
+    <nav className="nav">
+      <div className="nav-brand">
+        <span className="nav-mono">APMcA</span>
+        <span className="nav-sep">/</span>
+        <span className="nav-sub">CFO · CIO · Operator</span>
+      </div>
+      <ul className="nav-list">
+        {items.filter(i => sections[i.flag] !== false).map((i) => (
+          <li key={i.id}><a href={`#${i.id}`}>{i.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+Object.assign(window, { ValueCreation, Skills, Career, Deals, AITech, About, Contact, Nav });
+
+// Tweaks panel
+const { useState: useStateT, useEffect: useEffectT } = React;
+
+const PALETTES = {
+  navy: { name: "Navy & Cream", bg: "oklch(0.97 0.008 85)", ink: "oklch(0.22 0.03 255)", accent: "oklch(0.38 0.08 255)", muted: "oklch(0.55 0.015 255)", card: "oklch(0.995 0.004 85)" },
+  forest: { name: "Forest & Bone", bg: "oklch(0.97 0.006 100)", ink: "oklch(0.2 0.02 150)", accent: "oklch(0.42 0.08 155)", muted: "oklch(0.5 0.012 150)", card: "oklch(1 0.003 100)" },
+  oxblood: { name: "Oxblood & Ink", bg: "oklch(0.975 0.005 60)", ink: "oklch(0.18 0.015 30)", accent: "oklch(0.4 0.11 25)", muted: "oklch(0.52 0.015 30)", card: "oklch(1 0.002 60)" },
+  mono: { name: "Pure Mono", bg: "oklch(0.98 0 0)", ink: "oklch(0.15 0 0)", accent: "oklch(0.25 0 0)", muted: "oklch(0.55 0 0)", card: "oklch(1 0 0)" },
+  charcoal: { name: "Dark Operator", bg: "oklch(0.18 0.01 240)", ink: "oklch(0.96 0.005 85)", accent: "oklch(0.75 0.09 85)", muted: "oklch(0.65 0.01 240)", card: "oklch(0.22 0.012 240)" },
+};
+
+const FONTS = {
+  editorial: { name: "Fraunces × Inter", display: "'Fraunces', serif", body: "'Inter', sans-serif" },
+  modern: { name: "Instrument × Inter", display: "'Instrument Serif', serif", body: "'Inter', sans-serif" },
+  classic: { name: "Libre × Work Sans", display: "'Libre Caslon Text', serif", body: "'Work Sans', sans-serif" },
+  sans: { name: "Space Grotesk × Inter", display: "'Space Grotesk', sans-serif", body: "'Inter', sans-serif" },
+};
+
+function applyTweaks(t) {
+  const root = document.documentElement;
+  const p = PALETTES[t.palette] || PALETTES.forest;
+  root.style.setProperty("--bg", p.bg);
+  root.style.setProperty("--ink", p.ink);
+  root.style.setProperty("--accent", p.accent);
+  root.style.setProperty("--muted", p.muted);
+  root.style.setProperty("--card", p.card);
+  const f = FONTS[t.font] || FONTS.editorial;
+  root.style.setProperty("--font-display", f.display);
+  root.style.setProperty("--font-body", f.body);
+  root.style.setProperty("--density", t.density === "tight" ? "0.78" : t.density === "airy" ? "1.18" : "1");
+  root.dataset.hero = t.hero || "editorial";
+  root.dataset.palette = t.palette || "forest";
+}
+
+function TweaksPanel({ tweaks, setTweaks, show }) {
+  if (!show) return null;
+  const update = (k, v) => {
+    const next = { ...tweaks, [k]: v };
+    setTweaks(next);
+    window.parent.postMessage({ type: "__edit_mode_set_keys", edits: { [k]: v } }, "*");
+  };
+  const updateSection = (key, val) => {
+    const sections = { ...(tweaks.sections || {}), [key]: val };
+    const next = { ...tweaks, sections };
+    setTweaks(next);
+    window.parent.postMessage({ type: "__edit_mode_set_keys", edits: { sections } }, "*");
+  };
+  return (
+    <div className="tweaks">
+      <div className="tweaks-head">
+        <span className="tweaks-title">Tweaks</span>
+        <span className="tweaks-sub">live preview</span>
+      </div>
+
+      <div className="tweaks-group">
+        <div className="tweaks-label">Hero layout</div>
+        <div className="tweaks-seg">
+          {["editorial", "statsfirst", "statement"].map((h) => (
+            <button key={h} className={`tweaks-segbtn ${tweaks.hero === h ? "on" : ""}`} onClick={() => update("hero", h)}>
+              {h === "editorial" ? "Editorial" : h === "statsfirst" ? "Stats-first" : "Statement"}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="tweaks-group">
+        <div className="tweaks-label">Palette</div>
+        <div className="tweaks-swatches">
+          {Object.entries(PALETTES).map(([k, p]) => (
+            <button key={k} title={p.name} className={`tweaks-sw ${tweaks.palette === k ? "on" : ""}`} onClick={() => update("palette", k)}>
+              <span style={{ background: p.bg }} />
+              <span style={{ background: p.ink }} />
+              <span style={{ background: p.accent }} />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="tweaks-group">
+        <div className="tweaks-label">Type</div>
+        <div className="tweaks-seg tweaks-seg-wrap">
+          {Object.entries(FONTS).map(([k, f]) => (
+            <button key={k} className={`tweaks-segbtn ${tweaks.font === k ? "on" : ""}`} onClick={() => update("font", k)}>{f.name}</button>
+          ))}
+        </div>
+      </div>
+
+      <div className="tweaks-group">
+        <div className="tweaks-label">Density</div>
+        <div className="tweaks-seg">
+          {["tight", "default", "airy"].map((d) => (
+            <button key={d} className={`tweaks-segbtn ${tweaks.density === d ? "on" : ""}`} onClick={() => update("density", d)}>{d}</button>
+          ))}
+        </div>
+      </div>
+
+      <div className="tweaks-group">
+        <div className="tweaks-label">Sections</div>
+        <div className="tweaks-sections">
+          {[
+            ["value", "Value Creation"],
+            ["skills", "Skills"],
+            ["career", "Career"],
+            ["deals", "Case Studies"],
+            ["aitech", "AI & Tech"],
+            ["about", "About"],
+            ["contact", "Contact"],
+          ].map(([k, l]) => {
+            const on = (tweaks.sections || {})[k] !== false;
+            return (
+              <label key={k} className="tweaks-check">
+                <input type="checkbox" checked={on} onChange={(e) => updateSection(k, e.target.checked)} />
+                <span>{l}</span>
+              </label>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, { TweaksPanel, applyTweaks, PALETTES, FONTS });
+
+</script>
+
+<script>
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "hero": "editorial",
+    "palette": "forest",
+    "font": "editorial",
+    "density": "default",
+    "sections": {
+      "value": true,
+      "skills": true,
+      "career": true,
+      "deals": true,
+      "aitech": true,
+      "about": true,
+      "contact": true
+    }
+  }/*EDITMODE-END*/;
+  window.TWEAK_DEFAULTS = TWEAK_DEFAULTS;
+</script>
+
+<script type="text/babel">
+  const { useState, useEffect } = React;
+
+  function App() {
+    const [tweaks, setTweaks] = useState(window.TWEAK_DEFAULTS);
+    const [showTweaks, setShowTweaks] = useState(false);
+
+    useEffect(() => { applyTweaks(tweaks); }, [tweaks]);
+
+    useEffect(() => {
+      const onMsg = (e) => {
+        const d = e.data || {};
+        if (d.type === "__activate_edit_mode") setShowTweaks(true);
+        if (d.type === "__deactivate_edit_mode") setShowTweaks(false);
+      };
+      window.addEventListener("message", onMsg);
+      window.parent.postMessage({ type: "__edit_mode_available" }, "*");
+      return () => window.removeEventListener("message", onMsg);
+    }, []);
+
+    const Hero = tweaks.hero === "statsfirst" ? HeroStatsFirst
+               : tweaks.hero === "statement" ? HeroStatement
+               : HeroEditorial;
+
+    const s = tweaks.sections || {};
+
+    return (
+      <>
+        <Nav sections={s} />
+        <Hero />
+        {s.value !== false && <ValueCreation />}
+        {s.skills !== false && <Skills />}
+        {s.career !== false && <Career />}
+        {s.deals !== false && <Deals />}
+        {s.aitech !== false && <AITech />}
+        {s.about !== false && <About />}
+        {s.contact !== false && <Contact />}
+        <TweaksPanel tweaks={tweaks} setTweaks={setTweaks} show={showTweaks} />
+      </>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
