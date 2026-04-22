@@ -8,7 +8,7 @@
   --card: oklch(1 0.003 100);
   --line: color-mix(in oklch, var(--ink) 14%, transparent);
   --line-strong: color-mix(in oklch, var(--ink) 28%, transparent);
-  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Menlo', monospace;
   --density: 1;
@@ -68,6 +68,85 @@ a { color: inherit; text-decoration: none; }
 .section-head { display: grid; grid-template-columns: 180px 1fr; gap: 40px; align-items: start; margin-bottom: calc(56px * var(--density)); padding-bottom: 32px; border-bottom: 1px solid var(--line); }
 .section-head-meta { display: flex; flex-direction: column; gap: 8px; padding-top: 10px; }
 .section-number { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.18em; color: color-mix(in oklch, var(--muted) 55%, transparent); opacity: 0.7; }
+
+/* Old vs New CFO */
+.sec-oldnew { padding: 120px clamp(24px, 6vw, 96px); background: var(--ink); color: var(--bg); }
+.sec-oldnew .section-number,
+.sec-oldnew .section-kicker { color: color-mix(in oklch, var(--bg) 60%, transparent); }
+.sec-oldnew .section-title { color: var(--bg); }
+.sec-oldnew .section-lead { color: color-mix(in oklch, var(--bg) 70%, transparent); max-width: 72ch; }
+
+.cfo-table {
+  margin-top: 56px;
+  border: 1px solid color-mix(in oklch, var(--bg) 15%, transparent);
+  border-radius: 12px;
+  overflow: hidden;
+  background: color-mix(in oklch, var(--bg) 3%, transparent);
+}
+.cfo-thead {
+  display: grid;
+  grid-template-columns: 1fr 60px 1.2fr;
+  background: color-mix(in oklch, var(--bg) 6%, transparent);
+  border-bottom: 1px solid color-mix(in oklch, var(--bg) 15%, transparent);
+}
+.cfo-th {
+  padding: 18px 28px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.cfo-th-old { color: color-mix(in oklch, var(--bg) 55%, transparent); }
+.cfo-th-new { color: var(--accent); }
+.cfo-tr {
+  display: grid;
+  grid-template-columns: 1fr 60px 1.2fr;
+  align-items: center;
+  border-bottom: 1px solid color-mix(in oklch, var(--bg) 10%, transparent);
+  transition: background 0.2s ease;
+}
+.cfo-tr:last-child { border-bottom: 0; }
+.cfo-tr:hover { background: color-mix(in oklch, var(--bg) 5%, transparent); }
+.cfo-td {
+  padding: 22px 28px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.cfo-old {
+  color: color-mix(in oklch, var(--bg) 55%, transparent);
+  border-right: 1px dashed color-mix(in oklch, var(--bg) 12%, transparent);
+}
+.cfo-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--accent);
+  opacity: 0.7;
+}
+.cfo-tr:hover .cfo-arrow { opacity: 1; transform: translateX(2px); transition: transform 0.25s ease, opacity 0.2s ease; }
+.cfo-new {
+  color: var(--bg);
+  font-weight: 500;
+  border-left: 1px dashed color-mix(in oklch, var(--bg) 12%, transparent);
+}
+.cfo-tr:hover .cfo-new { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .cfo-thead { grid-template-columns: 1fr; }
+  .cfo-thead .cfo-th-arrow { display: none; }
+  .cfo-th-new { border-top: 1px solid color-mix(in oklch, var(--bg) 15%, transparent); }
+  .cfo-tr { grid-template-columns: 1fr; }
+  .cfo-old { border-right: 0; border-bottom: 1px dashed color-mix(in oklch, var(--bg) 12%, transparent); padding-bottom: 12px; }
+  .cfo-new { border-left: 0; padding-top: 12px; }
+  .cfo-arrow {
+    padding: 0 28px;
+    justify-content: flex-start;
+    transform: rotate(90deg);
+    transform-origin: left center;
+    height: 24px;
+  }
+}
 .section-kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
 .section-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(32px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.02em; margin: 0; max-width: 18ch; }
 .section-lead { color: var(--muted); font-size: 17px; max-width: 62ch; margin: 16px 0 0; grid-column: 2; }

@@ -419,6 +419,46 @@ function Deals() {
   );
 }
 
+function OldNewCFO() {
+  const rows = [
+    ["Owns accounting and reporting", "Builds systems that improve revenue, margin, and decision quality"],
+    ["Builds dashboards after the fact", "Designs KPI architecture around the real drivers of performance"],
+    ["Maintains banking relationships", "Continuously tests capital markets for better pricing and growth flexibility"],
+    ["Manages cash as a finance task", "Connects operations, treasury, and hedging into one decision system"],
+    ["Supports the business", "Helps leadership teams build the operating system of the business"],
+  ];
+  return (
+    <section id="oldnew" className="sec sec-oldnew">
+      <SectionHeader
+        number="05"
+        kicker="Old and New"
+        title="The role is changing, even when job descriptions do not say so clearly."
+        lead="The old CFO model centers on control, reporting, and process stewardship. The newer model still needs those disciplines, but uses them as a base for stronger pricing, better capital decisions, and more durable value creation."
+      />
+      <div className="cfo-table" role="table">
+        <div className="cfo-thead" role="row">
+          <div className="cfo-th cfo-th-old" role="columnheader">Old CFO</div>
+          <div className="cfo-th cfo-th-arrow" aria-hidden="true"></div>
+          <div className="cfo-th cfo-th-new" role="columnheader">New CFO</div>
+        </div>
+        <div className="cfo-tbody">
+          {rows.map(([a, b], i) => (
+            <div key={i} className="cfo-tr" role="row">
+              <div className="cfo-td cfo-old" role="cell">{a}</div>
+              <div className="cfo-td cfo-arrow" aria-hidden="true">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none">
+                  <path d="M1 6 H26 M21 1 L26 6 L21 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div className="cfo-td cfo-new" role="cell">{b}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function AITech() {
   const d = DATA();
   return (
@@ -549,7 +589,7 @@ const PALETTES = {
 };
 
 const FONTS = {
-  editorial: { name: "Fraunces × Inter", display: "'Fraunces', serif", body: "'Inter', sans-serif" },
+  editorial: { name: "Inter", display: "'Inter', sans-serif", body: "'Inter', sans-serif" },
   modern: { name: "Instrument × Inter", display: "'Instrument Serif', serif", body: "'Inter', sans-serif" },
   classic: { name: "Libre × Work Sans", display: "'Libre Caslon Text', serif", body: "'Work Sans', sans-serif" },
   sans: { name: "Space Grotesk × Inter", display: "'Space Grotesk', sans-serif", body: "'Inter', sans-serif" },
@@ -716,6 +756,7 @@ Object.assign(window, { TweaksPanel, applyTweaks, PALETTES, FONTS });
         {s.skills !== false && <Skills />}
         {s.career !== false && <Career />}
         {s.deals !== false && <Deals />}
+        <OldNewCFO />
         {s.aitech !== false && <AITech />}
         {s.about !== false && <About />}
         {s.contact !== false && <Contact />}
