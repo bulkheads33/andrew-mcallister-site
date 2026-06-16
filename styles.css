@@ -872,6 +872,13 @@ button { font: inherit; }
   color: var(--paper);
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  gap: clamp(34px, 6vw, 78px);
+  align-items: end;
+}
+
 .contact-panel p:not(.eyebrow) {
   max-width: 66ch;
   color: rgba(246, 242, 232, 0.72);
@@ -889,6 +896,31 @@ button { font: inherit; }
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.contact-portrait {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 320px);
+}
+
+.contact-portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid rgba(246, 242, 232, 0.28);
+  filter: saturate(0.92);
+}
+
+.contact-portrait figcaption {
+  margin-top: 12px;
+  color: rgba(246, 242, 232, 0.66);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -934,8 +966,13 @@ button { font: inherit; }
   .executive-console { justify-self: stretch; max-width: 100%; }
   .profile-photo { max-width: 240px; }
   .section-head,
+  .contact-grid,
   .timeline li {
     grid-template-columns: 1fr;
+  }
+  .contact-portrait {
+    justify-self: start;
+    width: min(100%, 240px);
   }
   .proof-grid,
   .case-grid,
