@@ -102,8 +102,8 @@ button { font: inherit; }
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(88vh - 58px);
-  padding: clamp(62px, 8vw, 104px) var(--pad-x) clamp(54px, 7vw, 88px);
+  min-height: auto;
+  padding: clamp(58px, 7vw, 92px) var(--pad-x) clamp(46px, 6vw, 72px);
   background: var(--night);
   color: var(--paper);
 }
@@ -133,9 +133,9 @@ button { font: inherit; }
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.68fr);
-  gap: clamp(42px, 7vw, 96px);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 44px);
+  align-items: start;
 }
 
 .eyebrow {
@@ -159,12 +159,12 @@ button { font: inherit; }
 }
 
 .hero-nameplate {
-  max-width: 12ch;
+  max-width: 15ch;
   margin: 0 0 20px;
   color: var(--paper);
-  font-size: clamp(58px, 9.2vw, 132px);
+  font-size: clamp(52px, 8vw, 104px);
   font-weight: 700;
-  line-height: 0.92;
+  line-height: 0.95;
   letter-spacing: 0;
 }
 
@@ -181,9 +181,9 @@ button { font: inherit; }
 }
 
 .hero h1 {
-  max-width: 25ch;
+  max-width: 24ch;
   margin: 0;
-  font-size: clamp(26px, 3.1vw, 44px);
+  font-size: clamp(26px, 3vw, 42px);
   line-height: 1.1;
   letter-spacing: 0;
   font-weight: 500;
@@ -191,7 +191,7 @@ button { font: inherit; }
 }
 
 .hero-lead {
-  max-width: 43rem;
+  max-width: 48rem;
   margin: 24px 0 0;
   color: rgba(246, 242, 232, 0.72);
   font-size: clamp(17px, 1.45vw, 21px);
@@ -246,21 +246,25 @@ button { font: inherit; }
 .btn-secondary { border-color: rgba(246, 242, 232, 0.35); color: var(--paper); background: rgba(246, 242, 232, 0.07); }
 
 .executive-console {
+  width: min(100%, 960px);
   border: 1px solid rgba(246, 242, 232, 0.22);
   background: rgba(246, 242, 232, 0.055);
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 55px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(20px);
 }
 
 .profile-row {
-  display: block;
-  padding: 22px;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
   border-bottom: 1px solid rgba(246, 242, 232, 0.16);
 }
 
 .profile-photo {
   position: relative;
-  width: 100%;
+  width: 92px;
   aspect-ratio: 1;
   overflow: hidden;
   border: 1px solid rgba(246, 242, 232, 0.26);
@@ -291,14 +295,14 @@ button { font: inherit; }
   place-items: center;
   color: rgba(246, 242, 232, 0.88);
   font-family: var(--font-mono);
-  font-size: clamp(44px, 8vw, 76px);
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 
 .profile-kicker {
   display: block;
-  margin: 18px 0 6px;
+  margin: 0 0 6px;
   color: var(--orange);
   font-family: var(--font-mono);
   font-size: 10px;
@@ -309,7 +313,7 @@ button { font: inherit; }
 .profile-row strong {
   display: block;
   color: var(--paper);
-  font-size: clamp(18px, 1.7vw, 24px);
+  font-size: clamp(18px, 1.6vw, 23px);
   line-height: 1.18;
 }
 
@@ -396,21 +400,19 @@ button { font: inherit; }
 
 .console-metrics {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .console-metrics div {
-  padding: 18px 20px;
+  padding: 16px 18px;
   border-right: 1px solid rgba(246, 242, 232, 0.16);
-  border-bottom: 1px solid rgba(246, 242, 232, 0.16);
 }
 
-.console-metrics div:nth-child(2n) { border-right: 0; }
-.console-metrics div:nth-last-child(-n+2) { border-bottom: 0; }
+.console-metrics div:last-child { border-right: 0; }
 
 .console-metrics strong {
   display: block;
-  font-size: clamp(24px, 2.6vw, 34px);
+  font-size: clamp(24px, 2.5vw, 32px);
   line-height: 1;
   color: var(--paper);
 }
@@ -920,10 +922,13 @@ button { font: inherit; }
   }
   .hero { min-height: auto; }
   .hero h1 { font-size: clamp(31px, 9vw, 48px); }
-  .hero-nameplate { font-size: clamp(48px, 18vw, 86px); }
+  .hero-nameplate { font-size: clamp(46px, 15vw, 78px); }
   .executive-console,
   .signal-console { min-width: 0; }
-  .profile-photo { max-width: 280px; }
+  .profile-row {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+  .profile-photo { width: 72px; }
   .section-head,
   .timeline li {
     grid-template-columns: 1fr;
@@ -942,9 +947,14 @@ button { font: inherit; }
     border-bottom: 1px solid rgba(246, 242, 232, 0.18);
   }
   .front-tab:last-child { border-bottom: 0; }
-  .console-controls,
   .console-metrics {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .console-metrics div:nth-child(2n) {
+    border-right: 0;
+  }
+  .console-metrics div:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(246, 242, 232, 0.16);
   }
   .site-footer {
     flex-direction: column;
