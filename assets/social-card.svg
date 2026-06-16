@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Andrew P. McAllister social card</title>
+  <desc id="desc">PE-backed CFO, President, CIO, and operating executive for asset-intensive platforms.</desc>
+  <rect width="1200" height="630" fill="#101915"/>
+  <path d="M0 520 C220 410 330 610 560 470 C790 330 875 420 1200 250 L1200 630 L0 630 Z" fill="#1f6f55" opacity="0.55"/>
+  <path d="M820 0 C740 170 960 195 890 340 C840 445 985 500 1200 415 L1200 0 Z" fill="#d66f2a" opacity="0.68"/>
+  <g fill="none" stroke="#f6f2e8" opacity="0.22">
+    <path d="M122 126 L335 210 L482 106 L705 240 L905 126"/>
+    <path d="M172 380 L352 310 L585 398 L742 300 L1020 372"/>
+    <path d="M260 118 L352 310 L482 106 L585 398 L705 240 L742 300"/>
+  </g>
+  <g fill="#f6f2e8">
+    <circle cx="122" cy="126" r="6"/>
+    <circle cx="335" cy="210" r="5"/>
+    <circle cx="482" cy="106" r="7"/>
+    <circle cx="705" cy="240" r="6"/>
+    <circle cx="905" cy="126" r="5"/>
+    <circle cx="172" cy="380" r="5"/>
+    <circle cx="352" cy="310" r="7"/>
+    <circle cx="585" cy="398" r="5"/>
+    <circle cx="742" cy="300" r="7"/>
+    <circle cx="1020" cy="372" r="6"/>
+  </g>
+  <text x="80" y="130" fill="#d66f2a" font-family="JetBrains Mono, Consolas, monospace" font-size="22" letter-spacing="4">ANDREW P. MCALLISTER</text>
+  <text x="80" y="240" fill="#f6f2e8" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700">PE-backed CFO / President</text>
+  <text x="80" y="320" fill="#f6f2e8" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700">for asset-intensive platforms</text>
+  <text x="80" y="405" fill="#c9d3ca" font-family="Inter, Arial, sans-serif" font-size="30">$420M assets built / $60M+ Year One revenue / AI + ERP + operations</text>
+  <text x="80" y="535" fill="#f6f2e8" font-family="JetBrains Mono, Consolas, monospace" font-size="20" letter-spacing="3">CFO / CIO / PRESIDENT / OPERATING EXECUTIVE</text>
+</svg>
