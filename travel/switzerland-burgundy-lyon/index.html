@@ -1,92 +1,148 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Switzerland • Burgundy • Lyon | Family Travel Guide</title>
+<title>Switzerland • Burgundy • Lyon | Family Travel Guide v3</title>
+<meta name="description" content="Sanitized family travel guide for Switzerland, Burgundy and Lyon.">
 <style>
-:root{--bg:#f7f2ea;--card:#fffdfa;--ink:#171717;--muted:#68615b;--line:#ded3c5;--burg:#7e1737;--green:#264d3d;--gold:#a77d35;--blue:#315b7a}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.42}
-header{background:linear-gradient(135deg,#14241f,#76213b);color:white;padding:34px 18px 22px}.wrap{max-width:1120px;margin:auto}
-.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;opacity:.78}h1{font-size:38px;line-height:1.05;margin:10px 0 8px}.subtitle{font-size:16px;opacity:.9;max-width:780px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:12px}
-.stat b{display:block;font-size:18px}.stat span{font-size:12px;opacity:.84}
-nav{position:sticky;top:0;background:rgba(247,242,234,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:5}
-nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 18px}nav a{text-decoration:none;color:var(--ink);background:white;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;white-space:nowrap}
-section{padding:22px 18px}.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 8px 28px rgba(40,30,20,.05)}h2{font-size:25px;margin:0 0 12px}
-.note{border-left:5px solid var(--gold);background:#fff7e7;border-radius:14px;padding:12px;color:#3b332a}
-.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.day{border:1px solid var(--line);background:#fff;border-radius:20px;padding:14px}
-.dayhead{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}.date{color:var(--burg);font-weight:900}.city{font-weight:800}.theme{font-size:12px;color:var(--muted);text-align:right}
-.item{display:grid;grid-template-columns:82px 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed #e6ded4}.item:last-child{border-bottom:0}.time{font-size:13px;color:var(--green);font-weight:900}
-.tag{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;background:#f1eadf;color:#6b4f21;border-radius:999px;padding:4px 8px;margin-bottom:4px}
-.item h3{margin:0 0 4px;font-size:16px;line-height:1.2}.party{font-size:12px;color:var(--blue);font-weight:800;margin-bottom:5px}.details{font-size:13px;margin:0;padding-left:16px;color:#2d2b28}
-.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.links a,.btn{font-size:12px;color:white;background:var(--green);text-decoration:none;border-radius:999px;padding:7px 10px;font-weight:800}
-.maps,.checklist{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.card h3{margin:0 0 6px;font-size:16px}.card p{font-size:13px;color:var(--muted);margin:0 0 10px}
-.footer{font-size:12px;color:var(--muted);padding:22px 18px 36px}
-@media(max-width:850px){h1{font-size:30px}.grid{grid-template-columns:repeat(2,1fr)}.days,.maps,.checklist{grid-template-columns:1fr}.item{grid-template-columns:70px 1fr}section{padding:14px 12px}.panel{border-radius:20px;padding:14px}}
+:root{--bg:#f6f1e8;--paper:#fffdf8;--ink:#151515;--muted:#69615a;--line:#ded3c5;--burg:#741532;--green:#244c3b;--blue:#315b7a;--gold:#a77d35}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45}
+header{background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.22),transparent 32%),linear-gradient(135deg,#10251f,#741532 64%,#9f6e2d 120%);color:white;padding:34px 18px 22px}
+.wrap{max-width:1180px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;opacity:.82}h1{font-size:42px;line-height:1.02;margin:10px 0 8px}.subtitle{max-width:880px;opacity:.92;font-size:16px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.23);border-radius:18px;padding:12px}.stat b{display:block;font-size:18px}.stat span{font-size:12px;opacity:.84}
+nav{position:sticky;top:0;z-index:10;background:rgba(246,241,232,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:8px;overflow:auto;padding:10px 18px}nav a{text-decoration:none;background:white;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:13px;white-space:nowrap}
+section{padding:18px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 14px 40px rgba(40,30,20,.06)}h2{font-size:26px;margin:0 0 14px}.kicker{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:900}
+.notice{background:#fff5e1;border-left:5px solid var(--gold);border-radius:14px;padding:12px}.alert{background:#fff2ef;border:1px solid #e7b6aa;color:#4d2017;border-radius:16px;padding:12px;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.card h3{margin:0 0 6px}.card p,.card li{font-size:13px;color:#2d2b28}.card ul{margin:0;padding-left:18px}
+.btns{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.btn{display:inline-block;text-decoration:none;background:var(--green);color:white;border-radius:999px;padding:8px 10px;font-size:12px;font-weight:900}.btn.alt{background:var(--burg)}.btn.soft{background:#f0e8dc;color:#3b2d18;border:1px solid #dcc8aa}
+.day{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden}.daytop{display:flex;justify-content:space-between;gap:12px;padding:14px;border-bottom:1px solid var(--line);background:#fbf7ef}.date{font-weight:900;color:var(--burg)}.city{font-weight:900;font-size:18px}.theme{font-size:12px;color:var(--muted);text-align:right}
+.seg{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:13px 14px;border-bottom:1px dashed #e6ded4}.seg:last-child{border-bottom:0}.time{font-weight:900;color:var(--green);font-size:13px}.seg h3{margin:0 0 4px;font-size:16px}.party{font-size:12px;color:var(--blue);font-weight:900;margin-bottom:4px}.seg ul{margin:0;padding-left:16px;font-size:13px}
+.pill{display:inline-block;background:#f0e8dc;color:#6d4f22;border-radius:999px;padding:4px 8px;font-size:10px;text-transform:uppercase;font-weight:900;letter-spacing:.06em}
+.split{display:grid;grid-template-columns:130px 1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:white}.split div{padding:10px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);font-size:13px}.split div:nth-child(4n){border-right:0}.split .head{background:var(--green);color:white;font-weight:900}.split .datecell{font-weight:900;color:var(--burg);background:#fbf7ef}
+.footer{font-size:12px;color:var(--muted);padding:20px 18px 36px}.print{position:fixed;right:14px;bottom:14px;z-index:12}.print button{border:0;background:var(--burg);color:white;border-radius:999px;padding:11px 14px;font-weight:900;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+@media(max-width:920px){h1{font-size:31px}.stats,.grid,.grid2{grid-template-columns:1fr}.split{grid-template-columns:1fr}.split .head:not(:first-child){display:none}.split div{border-right:0}.seg{grid-template-columns:70px 1fr}.panel{padding:14px}section{padding:12px}}
+@media print{nav,.print{display:none}body{background:white}header{background:white;color:black;border-bottom:2px solid #000}.panel,.card,.day{box-shadow:none}.grid,.grid2{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
+<div class="print"><button onclick="window.print()">Print / Save PDF</button></div>
+
 <header><div class="wrap">
-<div class="eyebrow">Family travel guide • sanitized share version</div>
+<div class="eyebrow">Family travel guide • sanitized public version 3</div>
 <h1>Switzerland • Burgundy • Lyon</h1>
-<div class="subtitle">July 9-16. Shareable family itinerary with hotels, train, restaurants, driving links, Lyon Bastille Day plan and daily logistics. Sensitive confirmation numbers, ticket numbers, loyalty numbers and seat assignments are intentionally omitted.</div>
-<div class="grid"><div class="stat"><b>Zurich</b><span>Arrival and wine bar</span></div><div class="stat"><b>Burgundy</b><span>Dijon, Vougeot, vineyards</span></div><div class="stat"><b>Lyon</b><span>Hotel Dieu and bouchons</span></div><div class="stat"><b>Jul 14</b><span>Bastille Day</span></div></div>
+<div class="subtitle">July 9–16 main family trip, with high-level context that Marjan and Ava arrive earlier and continue to Valencia afterward. This page is safe for family sharing and public-web hosting because sensitive travel credentials are omitted.</div>
+<div class="stats">
+<div class="stat"><b>Main trip</b><span>Jul 9–16</span></div>
+<div class="stat"><b>Family overlap</b><span>Switzerland • Burgundy • Lyon</span></div>
+<div class="stat"><b>Jul 14</b><span>Bastille Day in Lyon</span></div>
+<div class="stat"><b>Private details</b><span>Kept in iCloud master</span></div>
+</div>
 </div></header>
-<nav><div class="wrap"><a href="#daily">Daily</a><a href="#maps">Maps</a><a href="#bastille">Bastille Day</a><a href="#fhr">Hotel benefits</a><a href="#checklist">Checklist</a></div></nav>
-<section><div class="wrap panel"><h2>Privacy note</h2><div class="note">This is the family-share version. It does not include ticket numbers, hotel confirmation numbers, loyalty numbers, payment details, or airline seat assignments. Keep the full reservation cheat sheet private.</div></div></section>
 
-<section id="daily"><div class="wrap panel"><h2>Daily Command Center</h2><div class="days">
+<nav><div class="wrap"><a href="#dashboard">Dashboard</a><a href="#family">Family timing</a><a href="#daily">Daily plan</a><a href="#routes">Routes</a><a href="#bastille">Bastille Day</a><a href="#hotels">Hotels</a><a href="#restaurants">Dining</a><a href="#checklist">Checklist</a></div></nav>
 
-<article class="day"><div class="dayhead"><div><div class="date">Thu, Jul 9</div><div class="city">New York → Zurich</div></div><div class="theme">Departure</div></div>
-<div class="item"><div class="time">8:30 PM</div><div><div class="tag">Flight</div><h3>Swiss LX15 • JFK → Zurich</h3><div class="party">Family flight plan</div><ul class="details"><li>Depart JFK Terminal 1.</li><li>Arrive Zurich Friday morning.</li><li>Check gates and boarding time in the airline app on travel day.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=JFK+Terminal+1">JFK T1</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Zurich+Airport">Zurich Airport</a></div></div></div></article>
+<section id="dashboard"><div class="wrap panel">
+<div class="kicker">Trip control panel</div><h2>Command Center</h2>
+<div class="grid">
+<div class="card"><h3>Public page rule</h3><p>No ticket numbers, airline booking references, PNRs, loyalty numbers, Known Traveler numbers, seat assignments, or payment details are published here.</p></div>
+<div class="card"><h3>Private master</h3><p>The full-detail family version should stay in iCloud Drive and be shared only with Andy, Marjan and Ava.</p></div>
+<div class="card"><h3>Most important correction</h3><p>There is one SBB Zurich-to-Geneva train. Duplicate TripIt train entries are ignored.</p></div>
+</div>
+<br><div class="notice"><b>Version 3 update:</b> this public site now reflects the split-travel story at a high level: Marjan and Ava arrive earlier and continue to Valencia after Lyon, while Andy follows the core July 9–16 itinerary.</div>
+</div></section>
 
-<article class="day"><div class="dayhead"><div><div class="date">Fri, Jul 10</div><div class="city">Zurich</div></div><div class="theme">Arrival + wine bar</div></div>
-<div class="item"><div class="time">10:25 AM</div><div><div class="tag">Arrival</div><h3>Arrive Zurich</h3><div class="party">Family arrival</div><ul class="details"><li>Clear immigration and transfer to the hotel.</li><li>Hotel check-in is later in the day.</li></ul></div></div>
-<div class="item"><div class="time">3:00 PM</div><div><div class="tag">Hotel</div><h3>Hotel Alden Splügenschloss Zürich</h3><div class="party">Family stay</div><ul class="details"><li>Address: Splügenstrasse 2, 8002 Zurich.</li><li>Quiet luxury base near the lake and Bahnhofstrasse.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Alden+Spl%C3%BCgenschloss+Zurich">Map</a></div></div></div>
-<div class="item"><div class="time">8:00 PM</div><div><div class="tag">Dinner</div><h3>Mövenpick Wein-Bar Zürich</h3><div class="party">Party of 3</div><ul class="details"><li>First-night wine bar dinner.</li><li>Good low-friction plan after overnight flight.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Alden+Spl%C3%BCgenschloss+Zurich&destination=M%C3%B6venpick+Wein-Bar+Z%C3%BCrich">Directions</a></div></div></div></article>
+<section id="family"><div class="wrap panel"><div class="kicker">Family timing</div><h2>Sanitized Family Movement Overview</h2>
+<div class="split">
+<div class="head">Window</div><div class="head">Andy</div><div class="head">Marjan</div><div class="head">Ava</div>
+<div class="datecell">Before Jul 9</div><div>New York until main departure.</div><div>Earlier Europe arrival, including Zurich/Istanbul leg.</div><div>Earlier Europe arrival, including Zurich/Istanbul leg.</div>
+<div class="datecell">Jul 9–10</div><div>JFK to Zurich, then Hotel Alden and Zurich dinner.</div><div>Rejoin timing to confirm in private master.</div><div>Rejoin timing to confirm in private master.</div>
+<div class="datecell">Jul 11–16</div><div>Main family trip: train, Burgundy, Lyon.</div><div>Main family trip: train, Burgundy, Lyon.</div><div>Main family trip: train, Burgundy, Lyon.</div>
+<div class="datecell">After Jul 16</div><div>Returns to New York from Lyon.</div><div>Continues to Valencia before returning to New York later.</div><div>Continues to Valencia before returning to New York later.</div>
+</div>
+<br><div class="alert"><b>Private detail reminder:</b> use the iCloud private master for seats, exact booking references, full return details, and traveler-specific documents.</div>
+</div></section>
 
-<article class="day"><div class="dayhead"><div><div class="date">Sat, Jul 11</div><div class="city">Zurich → Geneva → Dijon</div></div><div class="theme">Train + transfer</div></div>
-<div class="item"><div class="time">10:32 AM</div><div><div class="tag">Train</div><h3>SBB IC714 • Zürich HB → Genève</h3><div class="party">Family of 3</div><ul class="details"><li>One train only; duplicate TripIt train entries removed.</li><li>Arrive Genève about 1:38 PM.</li><li>Allow time for rental car or onward transfer.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Z%C3%BCrich+HB">Zürich HB</a><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gen%C3%A8ve+station">Genève</a></div></div></div>
-<div class="item"><div class="time">3:00 PM</div><div><div class="tag">Hotel</div><h3>Grand Hôtel La Cloche Dijon - MGallery</h3><div class="party">Family stay</div><ul class="details"><li>Address: 14 Place Darcy, 21000 Dijon.</li><li>This is the likely MGallery stay based on the room description.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Gen%C3%A8ve+station&destination=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery">Route</a></div></div></div></article>
+<section id="daily"><div class="wrap panel"><div class="kicker">Day by day</div><h2>Daily Plan</h2>
+<div class="grid2">
 
-<article class="day"><div class="dayhead"><div><div class="date">Sun, Jul 12</div><div class="city">Dijon → Vougeot</div></div><div class="theme">Burgundy</div></div>
-<div class="item"><div class="time">Morning</div><div><div class="tag">Explore</div><h3>Dijon morning</h3><div class="party">Flexible</div><ul class="details"><li>Breakfast and short Dijon walk before the Côte de Nuits.</li><li>Possible stops: Beaune, Nuits-Saint-Georges, Clos de Vougeot.</li></ul></div></div>
-<div class="item"><div class="time">3:30 PM</div><div><div class="tag">FHR Hotel</div><h3>Les Sources de Vougeot</h3><div class="party">Family stay</div><ul class="details"><li>Address: Château de Gilly, Gilly-lès-Cîteaux.</li><li>Wine-country base in the heart of Burgundy.</li><li>Fine Hotels + Resorts benefits expected.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Les+Sources+de+Vougeot">Map</a></div></div></div></article>
+<article class="day"><div class="daytop"><div><div class="date">Thu, Jul 9</div><div class="city">New York → Zurich</div></div><div class="theme">Andy main departure</div></div>
+<div class="seg"><div class="time">8:30 PM</div><div><span class="pill">Flight</span><h3>Swiss LX15 • JFK → Zurich</h3><div class="party">Main itinerary</div><ul><li>Depart JFK Terminal 1.</li><li>Arrive Zurich Friday morning.</li><li>Check gates and boarding time in airline app.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=JFK+Terminal+1">JFK T1</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Zurich+Airport">Zurich Airport</a></div></div></div></article>
 
-<article class="day"><div class="dayhead"><div><div class="date">Mon, Jul 13</div><div class="city">Vougeot → Lyon</div></div><div class="theme">Lyon arrival</div></div>
-<div class="item"><div class="time">3:00 PM</div><div><div class="tag">FHR Hotel</div><h3>InterContinental Lyon - Hotel Dieu</h3><div class="party">Family stay</div><ul class="details"><li>Address: 20 Quai Jules Courmont, Lyon.</li><li>Ask hotel to link the back-to-back Lyon reservations.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Les+Sources+de+Vougeot&destination=InterContinental+Lyon+Hotel+Dieu">Drive</a></div></div></div>
-<div class="item"><div class="time">9:00 PM</div><div><div class="tag">Dinner</div><h3>L'Auberge des Canuts</h3><div class="party">Party of 3</div><ul class="details"><li>Traditional bouchon in Vieux Lyon.</li><li>Late dinner after travel day.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=L%27Auberge+des+Canuts+Lyon">Directions</a></div></div></div></article>
+<article class="day"><div class="daytop"><div><div class="date">Fri, Jul 10</div><div class="city">Zurich</div></div><div class="theme">Arrival + wine bar</div></div>
+<div class="seg"><div class="time">10:25 AM</div><div><span class="pill">Arrival</span><h3>Arrive Zurich</h3><div class="party">Family coordination</div><ul><li>Andy arrives Zurich. Marjan/Ava rejoin timing remains in private master.</li></ul></div></div>
+<div class="seg"><div class="time">3:00 PM</div><div><span class="pill">Hotel</span><h3>Hotel Alden Splügenschloss Zürich</h3><div class="party">Zurich base</div><ul><li>Address: Splügenstrasse 2, 8002 Zurich.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Alden+Spl%C3%BCgenschloss+Zurich">Hotel map</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Zurich+Airport&destination=Hotel+Alden+Spl%C3%BCgenschloss+Zurich">ZRH → Hotel</a></div></div></div>
+<div class="seg"><div class="time">8:00 PM</div><div><span class="pill">Dinner</span><h3>Mövenpick Wein-Bar Zürich</h3><div class="party">Party of 3</div><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Alden+Spl%C3%BCgenschloss+Zurich&destination=M%C3%B6venpick+Wein-Bar+Z%C3%BCrich">Directions</a></div></div></div></article>
 
-<article class="day"><div class="dayhead"><div><div class="date">Tue, Jul 14</div><div class="city">Lyon</div></div><div class="theme">Bastille Day</div></div>
-<div class="item"><div class="time">Day</div><div><div class="tag">Event day</div><h3>Bastille Day in Lyon</h3><div class="party">Family plan</div><ul class="details"><li>Expect crowds, security controls, taxi delays, and some closures.</li><li>Keep the day flexible and stay walkable from the hotel.</li></ul></div></div>
-<div class="item"><div class="time">8:00 PM</div><div><div class="tag">Dinner</div><h3>Le Bouchon des Berges</h3><div class="party">Party of 3</div><ul class="details"><li>Dinner reservation before fireworks.</li><li>Leave extra time and use walking routes where possible.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Le+Bouchon+des+Berges+Lyon">Directions</a></div></div></div>
-<div class="item"><div class="time">~10:30 PM</div><div><div class="tag">Fireworks</div><h3>Fireworks / river viewing</h3><div class="party">Family</div><ul class="details"><li>Pick viewing area before dinner.</li><li>Avoid relying on taxis immediately after fireworks.</li></ul></div></div></article>
+<article class="day"><div class="daytop"><div><div class="date">Sat, Jul 11</div><div class="city">Zurich → Geneva → Dijon</div></div><div class="theme">Train + transfer</div></div>
+<div class="seg"><div class="time">10:32 AM</div><div><span class="pill">Train</span><h3>SBB IC714 • Zürich HB → Genève</h3><div class="party">Family of 3</div><ul><li>One train only. Duplicate TripIt train entries removed.</li><li>Scheduled arrival around 1:38 PM.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Z%C3%BCrich+HB">Zürich HB</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gen%C3%A8ve+station">Genève station</a></div></div></div>
+<div class="seg"><div class="time">3:00 PM</div><div><span class="pill">Hotel</span><h3>Grand Hôtel La Cloche Dijon - MGallery</h3><div class="party">Dijon base</div><ul><li>Likely MGallery stay based on room description.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Gen%C3%A8ve+station&destination=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery">Route from Genève</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery">Hotel map</a></div></div></div></article>
 
-<article class="day"><div class="dayhead"><div><div class="date">Wed, Jul 15</div><div class="city">Lyon</div></div><div class="theme">Old Lyon + final dinner</div></div>
-<div class="item"><div class="time">Morning</div><div><div class="tag">FHR</div><h3>Breakfast at hotel</h3><div class="party">Breakfast for two expected via FHR</div><ul class="details"><li>Use the included hotel breakfast.</li><li>Confirm third guest charge at check-in.</li></ul></div></div>
-<div class="item"><div class="time">8:00 PM</div><div><div class="tag">Dinner</div><h3>Bouchon Tupin</h3><div class="party">Party of 3</div><ul class="details"><li>Final Lyon dinner.</li><li>Table reserved for the evening window.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Bouchon+Tupin+Lyon">Directions</a></div></div></div></article>
+<article class="day"><div class="daytop"><div><div class="date">Sun, Jul 12</div><div class="city">Dijon → Vougeot</div></div><div class="theme">Burgundy</div></div>
+<div class="seg"><div class="time">Morning</div><div><span class="pill">Explore</span><h3>Dijon / Côte de Nuits</h3><div class="party">Flexible</div><ul><li>Possible stops: Beaune, Nuits-Saint-Georges, Clos de Vougeot.</li></ul></div></div>
+<div class="seg"><div class="time">3:30 PM</div><div><span class="pill">FHR Hotel</span><h3>Les Sources de Vougeot</h3><div class="party">Burgundy stay</div><ul><li>Wine-country base. Use FHR benefits where applicable.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery&destination=Les+Sources+de+Vougeot">Dijon → Hotel</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Les+Sources+de+Vougeot">Hotel map</a></div></div></div></article>
 
-<article class="day"><div class="dayhead"><div><div class="date">Thu, Jul 16</div><div class="city">Lyon → Amsterdam → New York</div></div><div class="theme">Return</div></div>
-<div class="item"><div class="time">9:55 AM</div><div><div class="tag">Flight</div><h3>KLM KL1428 • Lyon → Amsterdam</h3><div class="party">Return flight plan</div><ul class="details"><li>Depart Lyon-Saint Exupéry Terminal 1.</li><li>Arrive Amsterdam about 11:35 AM.</li><li>Check gate and boarding time in KLM app.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Lyon-Saint+Exup%C3%A9ry+Airport">To LYS</a></div></div></div>
-<div class="item"><div class="time">12:35 PM</div><div><div class="tag">Flight</div><h3>KLM KL641 • Amsterdam → JFK</h3><div class="party">Return flight plan</div><ul class="details"><li>Arrive JFK Terminal 4 about 2:35 PM EDT.</li><li>Connection in Amsterdam is tight enough to stay focused.</li></ul><div class="links"><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=JFK+Terminal+4">JFK T4</a></div></div></div></article>
+<article class="day"><div class="daytop"><div><div class="date">Mon, Jul 13</div><div class="city">Vougeot → Lyon</div></div><div class="theme">Lyon arrival</div></div>
+<div class="seg"><div class="time">3:00 PM</div><div><span class="pill">FHR Hotel</span><h3>InterContinental Lyon - Hotel Dieu</h3><div class="party">Family stay</div><ul><li>Ask hotel to link the back-to-back Lyon reservations.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Les+Sources+de+Vougeot&destination=InterContinental+Lyon+Hotel+Dieu">Vougeot → Lyon</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=InterContinental+Lyon+Hotel+Dieu">Hotel map</a></div></div></div>
+<div class="seg"><div class="time">9:00 PM</div><div><span class="pill">Dinner</span><h3>L'Auberge des Canuts</h3><div class="party">Party of 3</div><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=L%27Auberge+des+Canuts+Lyon">Directions</a></div></div></div></article>
+
+<article class="day"><div class="daytop"><div><div class="date">Tue, Jul 14</div><div class="city">Lyon</div></div><div class="theme">Bastille Day</div></div>
+<div class="seg"><div class="time">Day</div><div><span class="pill">Event day</span><h3>Bastille Day in Lyon</h3><div class="party">Family strategy</div><ul><li>Expect crowds, security controls, taxi delays, and possible closures.</li><li>Keep plan walkable from the hotel.</li></ul></div></div>
+<div class="seg"><div class="time">8:00 PM</div><div><span class="pill">Dinner</span><h3>Le Bouchon des Berges</h3><div class="party">Party of 3</div><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Le+Bouchon+des+Berges+Lyon">Directions</a></div></div></div>
+<div class="seg"><div class="time">Evening</div><div><span class="pill">Fireworks</span><h3>Post-dinner viewing plan</h3><div class="party">Family</div><ul><li>Pick viewing zone before leaving hotel. Avoid relying on taxis immediately after fireworks.</li></ul><div class="btns"><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Basilica+Notre-Dame+de+Fourvi%C3%A8re+Lyon">Fourvière</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Sa%C3%B4ne+riverbanks+Lyon+Bonaparte+Bridge">Saône viewing</a></div></div></div></article>
+
+<article class="day"><div class="daytop"><div><div class="date">Wed, Jul 15</div><div class="city">Lyon</div></div><div class="theme">Final Lyon day</div></div>
+<div class="seg"><div class="time">Day</div><div><span class="pill">Explore</span><h3>Old Lyon / Fourvière / Les Halles</h3><div class="party">Flexible</div><ul><li>Keep pace moderate after Bastille Day.</li></ul></div></div>
+<div class="seg"><div class="time">8:00 PM</div><div><span class="pill">Dinner</span><h3>Bouchon Tupin</h3><div class="party">Party of 3</div><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Bouchon+Tupin+Lyon">Directions</a></div></div></div></article>
+
+<article class="day"><div class="daytop"><div><div class="date">Thu, Jul 16</div><div class="city">Split departures</div></div><div class="theme">Andy home • Marjan/Ava onward</div></div>
+<div class="seg"><div class="time">Morning</div><div><span class="pill">Airport</span><h3>Lyon-Saint Exupéry departure morning</h3><div class="party">Different onward itineraries</div><ul><li>Andy returns to New York.</li><li>Marjan and Ava continue to Valencia.</li><li>Exact airline details stay in private master.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Lyon-Saint+Exup%C3%A9ry+Airport">Hotel → LYS</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Lyon-Saint+Exup%C3%A9ry+Airport">LYS airport</a></div></div></div></article>
 
 </div></div></section>
 
-<section id="maps"><div class="wrap panel"><h2>One-tap route maps</h2><div class="maps">
-<div class="card"><h3>Zurich hotel → wine bar</h3><p>Friday evening plan.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Alden+Spl%C3%BCgenschloss+Zurich&destination=M%C3%B6venpick+Wein-Bar+Z%C3%BCrich">Open route</a></div>
-<div class="card"><h3>Geneva → Dijon</h3><p>Post-train transfer.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Gen%C3%A8ve+station&destination=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery">Open route</a></div>
-<div class="card"><h3>Dijon → Vougeot</h3><p>Wine-country drive.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery&destination=Les+Sources+de+Vougeot">Open route</a></div>
-<div class="card"><h3>Vougeot → Lyon</h3><p>Monday drive to Hotel Dieu.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Les+Sources+de+Vougeot&destination=InterContinental+Lyon+Hotel+Dieu">Open route</a></div>
-<div class="card"><h3>Lyon dinner walk</h3><p>Hotel to Bouchon Tupin.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Bouchon+Tupin+Lyon">Open route</a></div>
-<div class="card"><h3>Lyon airport</h3><p>Departure morning route.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Lyon-Saint+Exup%C3%A9ry+Airport">Open route</a></div>
+<section id="routes"><div class="wrap panel"><div class="kicker">Maps and movement</div><h2>Route Book</h2>
+<div class="grid">
+<div class="card"><h3>ZRH → Hotel Alden</h3><p>Zurich airport to hotel.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Zurich+Airport&destination=Hotel+Alden+Spl%C3%BCgenschloss+Zurich">Open route</a></div>
+<div class="card"><h3>Hotel Alden → Mövenpick</h3><p>Friday dinner.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Alden+Spl%C3%BCgenschloss+Zurich&destination=M%C3%B6venpick+Wein-Bar+Z%C3%BCrich">Open route</a></div>
+<div class="card"><h3>Genève → Dijon</h3><p>Post-train transfer.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Gen%C3%A8ve+station&destination=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery">Open route</a></div>
+<div class="card"><h3>Dijon → Les Sources</h3><p>Burgundy move.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery&destination=Les+Sources+de+Vougeot">Open route</a></div>
+<div class="card"><h3>Les Sources → Lyon</h3><p>Monday transfer.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Les+Sources+de+Vougeot&destination=InterContinental+Lyon+Hotel+Dieu">Open route</a></div>
+<div class="card"><h3>Lyon hotel → LYS</h3><p>Departure morning.</p><a class="btn alt" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Lyon-Saint+Exup%C3%A9ry+Airport">Open route</a></div>
 </div></div></section>
 
-<section id="bastille"><div class="wrap panel"><h2>Bastille Day Lyon strategy</h2><div class="checklist"><div class="card"><h3>Before dinner</h3><p>Keep the afternoon light, confirm the route to dinner, and choose the fireworks viewing area before leaving the hotel.</p></div><div class="card"><h3>After dinner</h3><p>Stay flexible. If crowds are heavy, prioritize walking back toward the hotel and rivers.</p></div><div class="card"><h3>Family logistics</h3><p>Carry hotel address offline, keep phones charged, and agree on the hotel lobby as the fallback meet point.</p></div></div></div></section>
+<section id="bastille"><div class="wrap panel"><div class="kicker">Special event day</div><h2>Bastille Day in Lyon</h2>
+<div class="grid2">
+<div class="card"><h3>Planning assumptions</h3><ul><li>July 14 is a national holiday and Lyon should be treated as an event city.</li><li>Official local programming should be checked closer to the date.</li><li>Use walking routes and avoid tight taxi-dependent plans.</li></ul></div>
+<div class="card"><h3>Recommended strategy</h3><ul><li>Keep the day light.</li><li>Leave extra time for dinner at Le Bouchon des Berges.</li><li>Use the hotel lobby as fallback meeting point.</li><li>Wait out crowd surge after fireworks.</li></ul><div class="btns"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=InterContinental+Lyon+Hotel+Dieu">Hotel</a><a class="btn soft" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Basilica+Notre-Dame+de+Fourvi%C3%A8re+Lyon">Fourvière</a></div></div>
+</div></div></section>
 
-<section id="fhr"><div class="wrap panel"><h2>Fine Hotels + Resorts reminders</h2><div class="checklist"><div class="card"><h3>Breakfast</h3><p>Breakfast for two expected at FHR stays. Confirm third guest charge.</p></div><div class="card"><h3>Property credit</h3><p>Ask what qualifies for the food and beverage credit before using it.</p></div><div class="card"><h3>Room move</h3><p>Ask Lyon hotel to link back-to-back bookings and avoid a Bastille Day room move.</p></div></div></div></section>
+<section id="hotels"><div class="wrap panel"><div class="kicker">Hotels</div><h2>Hotel Strategy</h2>
+<div class="grid">
+<div class="card"><h3>Hotel Alden Splügenschloss Zürich</h3><p>Zurich base.</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Alden+Spl%C3%BCgenschloss+Zurich">Map</a></div>
+<div class="card"><h3>Grand Hôtel La Cloche Dijon - MGallery</h3><p>Dijon base.</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Grand+H%C3%B4tel+La+Cloche+Dijon+MGallery">Map</a></div>
+<div class="card"><h3>Les Sources de Vougeot</h3><p>Burgundy FHR stay.</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Les+Sources+de+Vougeot">Map</a></div>
+<div class="card"><h3>InterContinental Lyon - Hotel Dieu</h3><p>Lyon FHR stay. Ask hotel to link back-to-back reservations.</p><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=InterContinental+Lyon+Hotel+Dieu">Map</a></div>
+<div class="card"><h3>FHR breakfast</h3><p>Breakfast for two expected at FHR properties. Confirm third-guest charge at check-in.</p></div>
+<div class="card"><h3>FHR property credit</h3><p>Ask what qualifies before ordering and use the credit intentionally.</p></div>
+</div></div></section>
 
-<section id="checklist"><div class="wrap panel"><h2>Final checklist</h2><div class="checklist"><div class="card"><p>Check airline apps for gates, boarding times and schedule changes.</p></div><div class="card"><p>Keep full reservation PDF private and available offline.</p></div><div class="card"><p>Download offline Google Maps for Zurich, Dijon/Burgundy and Lyon.</p></div><div class="card"><p>Confirm rental car pickup location and cross-border requirements.</p></div><div class="card"><p>Ask Lyon hotel to link both InterContinental stays.</p></div><div class="card"><p>Make sure everyone has the family-share link plus hotel addresses.</p></div></div></div></section>
-<div class="wrap footer">Sanitized family-share version. No confirmation numbers, ticket numbers, seat assignments, loyalty numbers, payment details or modification credentials are included.</div>
+<section id="restaurants"><div class="wrap panel"><div class="kicker">Dining</div><h2>Restaurant Plan</h2>
+<div class="grid">
+<div class="card"><h3>Mövenpick Wein-Bar Zürich</h3><p>Jul 10 • 8:00 PM • Party of 3.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Alden+Spl%C3%BCgenschloss+Zurich&destination=M%C3%B6venpick+Wein-Bar+Z%C3%BCrich">Directions</a></div>
+<div class="card"><h3>L'Auberge des Canuts</h3><p>Jul 13 • 9:00 PM • Party of 3.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=L%27Auberge+des+Canuts+Lyon">Directions</a></div>
+<div class="card"><h3>Le Bouchon des Berges</h3><p>Jul 14 • 8:00 PM • Party of 3. Bastille Day.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Le+Bouchon+des+Berges+Lyon">Directions</a></div>
+<div class="card"><h3>Bouchon Tupin</h3><p>Jul 15 • 8:00 PM • Party of 3.</p><a class="btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=InterContinental+Lyon+Hotel+Dieu&destination=Bouchon+Tupin+Lyon">Directions</a></div>
+</div></div></section>
+
+<section id="checklist"><div class="wrap panel"><div class="kicker">Before departure</div><h2>Final Checklist</h2>
+<div class="grid">
+<div class="card"><h3>Private master</h3><p>Use iCloud private master for exact booking references, seats, tickets, loyalty numbers and extended Marjan/Ava details.</p></div>
+<div class="card"><h3>Flights</h3><p>Check gates, boarding times and any schedule changes in the airline apps.</p></div>
+<div class="card"><h3>Train</h3><p>Use only SBB IC714 for Zurich to Geneva.</p></div>
+<div class="card"><h3>Lyon hotel</h3><p>Ask the hotel to link both Lyon reservations and avoid a July 14 room move.</p></div>
+<div class="card"><h3>Offline maps</h3><p>Download Zurich, Dijon/Burgundy, Lyon, and Valencia maps where applicable.</p></div>
+<div class="card"><h3>Family</h3><p>Everyone should save this public link and the private iCloud master offline.</p></div>
+</div></div></section>
+
+<div class="wrap footer">Public Family Guide v3. Sanitized for public/static web hosting. Full sensitive travel credentials remain in the private iCloud family master.</div>
 </body></html>
