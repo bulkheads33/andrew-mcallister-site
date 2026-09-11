@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Andrew P. McAllister social card</title>
-  <desc id="desc">PE-backed CFO, President, CIO, and operating executive for asset-intensive platforms.</desc>
+  <desc id="desc">Hands-on CFO solving business problems through people, process and technology.</desc>
   <rect width="1200" height="630" fill="#101915"/>
   <path d="M0 520 C220 410 330 610 560 470 C790 330 875 420 1200 250 L1200 630 L0 630 Z" fill="#1f6f55" opacity="0.55"/>
   <path d="M820 0 C740 170 960 195 890 340 C840 445 985 500 1200 415 L1200 0 Z" fill="#d66f2a" opacity="0.68"/>
@@ -22,8 +22,8 @@
     <circle cx="1020" cy="372" r="6"/>
   </g>
   <text x="80" y="130" fill="#d66f2a" font-family="JetBrains Mono, Consolas, monospace" font-size="22" letter-spacing="4">ANDREW P. MCALLISTER</text>
-  <text x="80" y="240" fill="#f6f2e8" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700">PE-backed CFO / President</text>
-  <text x="80" y="320" fill="#f6f2e8" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700">for asset-intensive platforms</text>
-  <text x="80" y="405" fill="#c9d3ca" font-family="Inter, Arial, sans-serif" font-size="30">$420M assets built / $60M+ Year One revenue / AI + ERP + operations</text>
-  <text x="80" y="535" fill="#f6f2e8" font-family="JetBrains Mono, Consolas, monospace" font-size="20" letter-spacing="3">CFO / CIO / PRESIDENT / OPERATING EXECUTIVE</text>
+  <text x="80" y="240" fill="#f6f2e8" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700">Hands-on CFO</text>
+  <text x="80" y="320" fill="#f6f2e8" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="700">People. Process. Technology.</text>
+  <text x="80" y="405" fill="#c9d3ca" font-family="Inter, Arial, sans-serif" font-size="30">Business building / Financial leadership / Operating change</text>
+  <text x="80" y="535" fill="#f6f2e8" font-family="JetBrains Mono, Consolas, monospace" font-size="20" letter-spacing="3">PRIVATE EQUITY / OWNER-LED BUSINESSES</text>
 </svg>
